@@ -12,8 +12,12 @@ rows = data.shape[0]
 for i in lables:#统计各种性状的数量，放入字典
     for index,x in data.iterrows():
         if x[i] not in lables_count[i]:
-            lables_count[i][x[i]] = 0
-        lables_count[i][x[i]] += 1
+            lables_count[i][x[i]] = dict.fromkeys(['是','否','num'],0)
+        if x[-1] == '是':
+            lables_count[i][x[i]]['是'] += 1
+        else:
+            lables_count[i][x[i]]['否'] += 1
+        lables_count[i][x[i]]['num'] += 1
 
 
 
@@ -27,8 +31,3 @@ H_D = np.array([])#储存每个类的熵
 for i in lables:
     H_D = np.append(H_D, Calculate_H(i))
 print(H_D)
-
-H_D_A = np.array([])#条件熵
-for i in lables_count.values():
-    for j in i.values():
-
