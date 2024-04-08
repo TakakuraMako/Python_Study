@@ -50,6 +50,10 @@ def Calclate_H_D_A(lables, lables_count, data):
     return H_D_A
 
 def Calclate_G_D_A(data, lables, lables_count):
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 2d730fc455e96bbeafa77b63703574c8f861b9bf
     H_D = Calcualate_H(data)
     #print('H_D:{0}'.format(H_D))
     lables_count = Calcualate_num(lables, data, lables_count_init)
@@ -82,6 +86,22 @@ def Calclate_G_D_A(data, lables, lables_count):
             
             #print(data_new)
             Calclate_G_D_A(data_new, lables_new, lables_count_init_new)
+<<<<<<< HEAD
+=======
+=======
+    while True:
+        H_D = Calcualate_H(data)
+        print('H_D:{0}'.format(H_D))
+        lables_count = Calcualate_num(lables, data, lables_count_init)
+        H_D_A = Calclate_H_D_A(lables, lables_count, data)
+        G_D_A = dict.fromkeys(lables_count,0)
+        for i in lables:
+            G_D_A[i] = H_D - H_D_A[i]
+        print(G_D_A)
+        insert = max(G_D_A, key=lambda x: G_D_A[x])
+        print(insert)
+>>>>>>> 9b58d767debd7a83097f2541db5f3a2c1147921b
+>>>>>>> 2d730fc455e96bbeafa77b63703574c8f861b9bf
 
         for i in lables_count[insert]:
             if lables_count[insert][i]['是'] == 0:
