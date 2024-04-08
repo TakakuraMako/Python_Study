@@ -83,5 +83,23 @@ def Calclate_G_D_A(data, lables, lables_count):
             #print(data_new)
             Calclate_G_D_A(data_new, lables_new, lables_count_init_new)
 
+        for i in lables_count[insert]:
+            if lables_count[insert][i]['是'] == 0:
+                print('no'+ i)
+                #树操作
+            elif lables_count[insert][i]['否'] == 0:
+                print('yes'+ i)
+                #树操作
+            else:
+                for a,x in data.iterrows():
+                    if x[insert] == i:
+                        data = data.drop(a)
+                lables_count.pop(insert)
+                lables_count_init.pop(insert)
+                lables.remove(insert)
+                print(data)
+                Calclate_G_D_A(data, lables, lables_count)
+        if len(lables) == 0:
+            break
 
 Calclate_G_D_A(data, lables, lables_count_init)
