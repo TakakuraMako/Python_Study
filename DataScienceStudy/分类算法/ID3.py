@@ -1,14 +1,11 @@
 import numpy as np
 import pandas as pd
 import math
-import tree
 import copy
-
 data = pd.read_csv('./DataScienceStudy/分类算法/西瓜数据集 2.0.csv')
 epsilon = 2
 lables = ['色泽','根蒂','敲声','纹理','脐部','触感']
 lables_count_init = {'色泽':{},'根蒂':{},'敲声':{},'纹理':{},'脐部':{},'触感':{}}
-
 
 def Calcualate_num(lables,data, lables_count_init):
     lables_count_temp = copy.deepcopy(lables_count_init)
@@ -63,11 +60,14 @@ def Calclate_G_D_A(data, lables, lables_count):
 
     for i in lables_count[insert]:
         if lables_count[insert][i]['是'] == 0:
-            print('no'+ i)
+            print(insert + ' ' + i + "是坏瓜")
+
         elif lables_count[insert][i]['否'] == 0:
-            print('yes'+ i)
+            print(insert + ' ' + i + "是好瓜")
 
         else:
+            print('\n' + '新增分类 ' + insert + ' ' + i)
+            print(insert + '是' + i + '时' )
             data_new = data
             lables_new =copy.deepcopy(lables)
             lables_new.remove(insert)
@@ -78,5 +78,7 @@ def Calclate_G_D_A(data, lables, lables_count):
             lables_count_init_new.pop(insert)
             #print(data_new)
             Calclate_G_D_A(data_new, lables_new, lables_count_init_new)
+            print('返回上一级')
 
 Calclate_G_D_A(data, lables, lables_count_init)
+print('结束')
