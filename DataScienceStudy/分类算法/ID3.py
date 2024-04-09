@@ -64,12 +64,9 @@ def Calclate_G_D_A(data, lables, lables_count):
     for i in lables_count[insert]:
         if lables_count[insert][i]['是'] == 0:
             print('no'+ i)
-            
-            #树操作
         elif lables_count[insert][i]['否'] == 0:
             print('yes'+ i)
-            
-            #树操作
+
         else:
             data_new = data
             lables_new =copy.deepcopy(lables)
@@ -79,43 +76,7 @@ def Calclate_G_D_A(data, lables, lables_count):
                     data_new = data_new.drop(a)
             lables_count_init_new = copy.deepcopy(lables_count_init)
             lables_count_init_new.pop(insert)
-            
             #print(data_new)
             Calclate_G_D_A(data_new, lables_new, lables_count_init_new)
-<<<<<<<<< Temporary merge branch 1
-=======
-    while True:
-        H_D = Calcualate_H(data)
-        print('H_D:{0}'.format(H_D))
-        lables_count = Calcualate_num(lables, data, lables_count_init)
-        H_D_A = Calclate_H_D_A(lables, lables_count, data)
-        G_D_A = dict.fromkeys(lables_count,0)
-        for i in lables:
-            G_D_A[i] = H_D - H_D_A[i]
-        print(G_D_A)
-        insert = max(G_D_A, key=lambda x: G_D_A[x])
-        print(insert)
->>>>>>> 9b58d767debd7a83097f2541db5f3a2c1147921b
-=========
->>>>>>>>> Temporary merge branch 2
-
-        for i in lables_count[insert]:
-            if lables_count[insert][i]['是'] == 0:
-                print('no'+ i)
-                #树操作
-            elif lables_count[insert][i]['否'] == 0:
-                print('yes'+ i)
-                #树操作
-            else:
-                for a,x in data.iterrows():
-                    if x[insert] == i:
-                        data = data.drop(a)
-                lables_count.pop(insert)
-                lables_count_init.pop(insert)
-                lables.remove(insert)
-                print(data)
-                Calclate_G_D_A(data, lables, lables_count)
-        if len(lables) == 0:
-            break
 
 Calclate_G_D_A(data, lables, lables_count_init)
