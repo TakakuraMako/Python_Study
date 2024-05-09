@@ -1,84 +1,63 @@
-class BankerAlgorithm:
-    def __init__(self, available, max_demand, allocation):
-        self.available = available
-        self.max_demand = max_demand
-        self.allocation = allocation
-        self.need = [[max_demand[i][j] - allocation[i][j] for j in range(len(available))] for i in range(len(allocation))]
+def banker_algorithm(available, max_demand, allocation):
+    # 计算每个进程的需求
+    need = [[max_demand[i][j] - allocation[i][j] for j in range(len(available))] for i in range(len(allocation))]
 
-    def request_resources(self, process_id, request):
-        # 检查请求是否超出了该进程的需求
-        if any(request[j] > self.need[process_id][j] for j in range(len(request))):
-            print(f"进程{process_id}的请求超出最大需求，请求被拒绝。")
-            return False
-        # 检查是否有足够的资源满足请求
-        if any(request[j] > self.available[j] for j in range(len(request))):
-            print(f"资源不足，进程{process_id}的请求被拒绝。")
-            return False
+    # 安全序列
+    safe_sequence = []
 
-        # 尝试分配资源
-        for j in range(len(request)):
-            self.available[j] -= request[j]
-            self.allocation[process_id][j] += request[j]
-            self.need[process_id][j] -= request[j]
+    # 进程数量
+    num_processes = len(allocation)
+    # 资源类型数量
+    num_resources = len(available)
 
-        # 检查此次分配后是否安全
-        is_safe, _ = self.is_safe()
-        if not is_safe:
-            # 如果不安全，回滚
-            for j in range(len(request)):
-                self.available[j] += request[j]
-                self.allocation[process_id][j] -= request[j]
-                self.need[process_id][j] += request[j]
-            print(f"不能满足进程{process_id}的请求而保持系统安全，请求被拒绝。")
-            return False
-        print(f"进程{process_id}的请求被批准。")
-        return True
+    # 完成标志
+    finish = [False] * num_processes
 
-    def is_safe(self):
-        work = self.available[:]
-        finish = [False] * len(self.allocation)
-        safe_sequence = []
+    # 工作向量，初始化为可用资源
+    work = available[:]
 
-        while len(safe_sequence) < len(self.allocation):
-            made_progress = False
-            for i in range(len(self.allocation)):
-                if not finish[i] and all(self.need[i][j] <= work[j] for j in range(len(work))):
-                    for j in range(len(work)):
-                        work[j] += self.allocation[i][j]
-                    finish[i] = True
-                    safe_sequence.append(i)
-                    made_progress = True
+    while len(safe_sequence) < num_processes:
+        allocated_this_round = False
+        for i in range(num_processes):
+            if not finish[i] and all(need[i][j] <= work[j] for j in range(num_resources)):
+                for j in range(num_resources):
+                    work[j] += allocation[i][j]
+                finish[i] = True
+                safe_sequence.append(i + 1)  # 加1以使进程编号从1开始
+                allocated_this_round = True
 
-            if not made_progress:
-                return False, safe_sequence
+        if not allocated_this_round:
+            break
+
+    if len(safe_sequence) == num_processes:
         return True, safe_sequence
+    else:
+        return False, []
 
-    def try_to_fulfill_all(self):
-        # 尝试满足所有进程的全部需求
-        for process_id in range(len(self.need)):
-            while not all(need == 0 for need in self.need[process_id]):
-                request = self.need[process_id][:]
-                if not self.request_resources(process_id, request):
-                    print(f"无法安全地满足进程{process_id}的全部需求。")
-                    return
-        print("所有进程的需求已被安全满足。")
+# 可用资源
+available_resources = [3, 3, 2]
 
-# 示例数据
-available = [2, 1, 1]
-max_demand = [
-    [5, 5, 9],
-    [5, 3, 6],
-    [4, 0, 11],
-    [4, 2, 5],
-    [4, 2, 4]
-]
-allocation = [
-    [2, 1, 2],
-    [4, 0, 2],
-    [4, 0, 5],
-    [2, 0, 4],
-    [3, 1, 4]
+# 最大需求
+maximum_demand = [
+    [7, 5, 3],
+    [3, 2, 2],
+    [9, 0, 2],
+    [2, 2, 2],
+    [4, 3, 3]
 ]
 
-banker = BankerAlgorithm(available, max_demand, allocation)
-banker.try_to_fulfill_all()
+# 当前分配
+current_allocation = [
+    [0, 1, 0],
+    [2, 0, 0],
+    [3, 0, 2],
+    [2, 1, 1],
+    [0, 0, 2]
+]
+
+# 执行银行家算法
+status, sequence = banker_algorithm(available_resources, maximum_demand, current_allocation)
+if status:
+    print("系统处于安全状态，安全序列为:", sequence)
+else:
+    print("系统处于不安全状态，无安全序列")

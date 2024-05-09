@@ -6,7 +6,6 @@ data = pd.read_csv('./DataScienceStudy/分类算法/西瓜数据集 2.0.csv')
 epsilon = 2
 lables = ['色泽','根蒂','敲声','纹理','脐部','触感']
 lables_count_init = {'色泽':{},'根蒂':{},'敲声':{},'纹理':{},'脐部':{},'触感':{}}
-
 def Calcualate_num(lables,data, lables_count_init):
     lables_count_temp = copy.deepcopy(lables_count_init)
     
