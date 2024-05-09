@@ -35,24 +35,24 @@ def banker_algorithm(available, max_demand, allocation):
         return False, []
 
 # 可用资源
-available_resources = [3, 3, 2]
+available_resources = [2, 1, 1]
 
 # 最大需求
 maximum_demand = [
-    [7, 5, 3],
-    [3, 2, 2],
-    [9, 0, 2],
-    [2, 2, 2],
-    [4, 3, 3]
+    [5, 5, 9],
+    [5, 3, 6],
+    [4, 0, 11],
+    [4, 2, 5],
+    [4, 2, 4]
 ]
 
 # 当前分配
 current_allocation = [
-    [0, 1, 0],
-    [2, 0, 0],
-    [3, 0, 2],
-    [2, 1, 1],
-    [0, 0, 2]
+    [2, 1, 2],
+    [4, 0, 2],
+    [4, 0, 5],
+    [2, 0, 4],
+    [3, 1, 4]
 ]
 
 # 执行银行家算法
