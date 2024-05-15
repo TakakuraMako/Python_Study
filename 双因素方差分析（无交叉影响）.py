@@ -1,7 +1,10 @@
 import numpy as np
-A = np.array([[76, 77, 79, 80],
-              [78, 77, 78, 79],
-              [80, 80, 80, 81]])
+import scipy.stats as st
+
+alpha = 0.05
+A = np.array([[17, 11, 11, 11],
+              [8, 9, 9, 8],
+              [8, 13.5, 12.5, 12]])
 rows, columns = A.shape
 row_mean = np.mean(A,1)
 column_mean = np.mean(A,0)
@@ -26,5 +29,9 @@ MSC = SSC/(columns-1)
 MSE = SSE/((rows-1)*(columns-1))
 Fr = MSR/MSE
 Fc = MSC/MSE
+F_ar = st.f.isf(alpha,rows-1,(columns-1)*(rows-1))
+F_ac = st.f.isf(alpha,columns-1,(columns-1)*(rows-1))
 print('行均值:{}\n列均值:{}\n总体均值:{}'.format(row_mean,column_mean,A_mean))
 print('SSR:{},SSC:{},SSE:{}\nMSR:{},MSC:{},MSE:{}\nFr:{},Fc:{}'.format(SSR,SSC,SSE,MSR,MSC,MSE,Fr,Fc))
+
+print('行上分位点:{}\n列上分位点:{}'.format(F_ar,F_ac))
