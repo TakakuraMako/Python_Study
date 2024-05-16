@@ -2,7 +2,7 @@ import numpy as np
 import scipy.stats as st
 
 alpha = 0.05
-A = np.array([[17, 11, 11, 11],
+A = np.array([[12, 11, 11, 11],
               [8, 9, 9, 8],
               [8, 13.5, 12.5, 12]])
 rows, columns = A.shape
