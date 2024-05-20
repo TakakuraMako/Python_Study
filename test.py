@@ -10,12 +10,8 @@ data = pd.DataFrame({
 data['Day'] = data['Time'].str.split(' ').str[0].str.split("/",n=1).str[1]
 sum = data.groupby('Day')['num'].sum().reset_index()
 
-data = data.drop(data[data['Time'] == data.iloc[-1,0]].index)
+# data = data.drop(data[data['Time'] == data.iloc[-1,0]].index)
 data['month_day'] = pd.to_datetime(data['month_day'], format='%Y/%m/%d %M:%S')
 data['month_day'] = data['month_day'].dt.strftime('%m%d')
 
-
-folder_path = './机器学习/用户用电数据'
-csv_files = glob.glob(os.path.join(folder_path, '*.csv'))
-data = pd.read_csv(csv_files[0])
-print(data)
+print(min(['12aaa啊啊', 1]))
