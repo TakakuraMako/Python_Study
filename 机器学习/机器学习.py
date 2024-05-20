@@ -73,8 +73,33 @@ data['cluster'] = kmeans.fit_predict(data[['Aggregate_scaled']])
 plt.figure(figsize=(12, 6))
 plt.scatter(pd.to_datetime(data['Unix']), data['Aggregate'], c=data['cluster'], cmap='viridis')
 plt.title('House Electricity Usage Clustering')
+for i in range(2):
+    data = pd.read_csv(csv_files[i])
+    data, data_new = Data_preprocessing(data)
+    data_list.append(data_new)
+Data_Visualize(data_list)
+
+
+
+'''
+
+# 标准化数据
+scaler = StandardScaler()
+data['Aggregate_scaled'] = scaler.fit_transform(data[['Aggregate']])
+
+# 使用KMeans进行聚类
+kmeans = KMeans(n_clusters=3, random_state=42)
+data['cluster'] = kmeans.fit_predict(data[['Aggregate_scaled']])
+
+# 可视化聚类结果
+plt.figure(figsize=(12, 6))
+plt.scatter(pd.to_datetime(data['Unix']), data['Aggregate'], c=data['cluster'], cmap='viridis')
+plt.title('House Electricity Usage Clustering')
 plt.xlabel('Time')
 plt.ylabel('Electricity Usage')
 plt.grid(True)
+plt.ylabel('Electricity Usage')
+plt.grid(True)
 plt.show()
+'''
 '''
