@@ -13,7 +13,7 @@ def Data_preprocessing(data):
 
     #转化为pandas时间格式
     data['Time'] = pd.to_datetime(data['Time'], format='%Y/%m/%d %M:%S')
-    #data = data.iloc[0:20000]
+    data = data.iloc[0:100000]
     data['Day'] = data['Time'].dt.strftime('%m%d')
 
     #首尾记录不是完整一天，去除
@@ -24,15 +24,15 @@ def Data_preprocessing(data):
     print(data_new)
     return data, data_new
 
-def Data_Visualize(data_list):
+def Data_Visualize(data_day):
     #每天用电
     plt.figure()
     y = []
-    x = data_new['Day']
+    x = list(data_day['Day'])
     #x = np.linspace(0,data_new.shape[0],data_new.shape[0])
-    for i in range(len(csv_files)):
-        y.append(data_list[i]['Aggregate'])
-    plt.plot(x,y)
+    for i in range(2):
+        y = data_day.iloc[:,i]
+        plt.plot(x,y)
     plt.xlabel('Time')
     plt.ylabel('Aggregate')
     #plt.xticks(x[::2],list(data_new['Day'][::2],),rotation = 45)
@@ -42,8 +42,10 @@ def Data_Visualize(data_list):
 
 folder_path = './机器学习/用户用电数据'
 csv_files = glob.glob(os.path.join(folder_path, '*.csv'))
-data = pd.read_csv(csv_files[0])
 data_list = []
+data_day = pd.DataFrame({
+    'Day':[]
+})
 #查看基本信息
 '''
 print(data.head)
@@ -55,6 +57,7 @@ for i in range(2):
     data = pd.read_csv(csv_files[i])
     data, data_new = Data_preprocessing(data)
     data_list.append(data_new)
+    data_day = pd.merge(data_day, data_new, how='outer', on='Day')
 Data_Visualize(data_list)
 
 
@@ -82,7 +85,7 @@ Data_Visualize(data_list)
 
 
 '''
-
+'''
 # 标准化数据
 scaler = StandardScaler()
 data['Aggregate_scaled'] = scaler.fit_transform(data[['Aggregate']])
@@ -101,5 +104,4 @@ plt.grid(True)
 plt.ylabel('Electricity Usage')
 plt.grid(True)
 plt.show()
-'''
 '''
