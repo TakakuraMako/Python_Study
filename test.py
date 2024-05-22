@@ -3,8 +3,8 @@ import pandas as pd
 import glob
 import os
 data = pd.DataFrame({
-    'Time':['2014/6/26','2014/6/27','2014/6/27'],
-    'num':[1,2,2],
+    'Time':[1,2,3],
+    'num':[1,1,2],
     'month_day':['2014/6/29 13:15', '2014/6/29 13:15', '2014/6/29 13:15']
 })
 data['Day'] = data['Time'].str.split(' ').str[0].str.split("/",n=1).str[1]

@@ -68,6 +68,13 @@ data_day = pd.read_csv('./机器学习/data_day.csv',converters={u'Day':str})
 print(data_day['Day'])
 Data_Visualize(data_day)
 
+#日最高用电，最低用电，峰谷差，日平均
+data = pd.DataFrame({
+    'Day_Max':[],
+    'Day_Min':[],
+    'Max-Min':[],
+    'Average':[],
+})
 
 
 '''
