@@ -59,6 +59,8 @@ def Data_Visualize(data_day):
     plt.grid(axis = 'y')
     plt.show()
 
+
+
 folder_path = './机器学习/用户用电数据'
 csv_files = glob.glob(os.path.join(folder_path, '*.csv'))
 data_list = []
@@ -72,9 +74,9 @@ print(data.info())
 print(data.shape)
 print(data.describe())
 '''
-
-data_new = pd.DataFrame({},index = ['日峰值','日谷值', '日均值', '谷峰差', '最高用电时段','日峰谷差率'])
-for i in range(len(csv_files)):
+index = ['日峰值','日谷值', '日均值', '谷峰差', '最高用电时段','日峰谷差率']
+data_new = pd.DataFrame({},index = index)
+for i in range(2):
     data = pd.read_csv(csv_files[i])
     data = Data_preprocessing(data)
     _add = re.search(r"House\d+", csv_files[i].replace('_','')).group()
@@ -85,6 +87,23 @@ for i in range(len(csv_files)):
     data_new.loc['日峰谷差率',_add] = data_new.loc['日谷值',_add]/data_new.loc['日峰值',_add]
     data_new.loc['最高用电时段',_add] = Max_hour(data)
 print(data_new)
+
+
+fig, axs = plt.subplots(len(index), 2, figsize=(20, 20))
+
+# 生成每个列的柱状图
+for i in range(len(index)):
+    axs[i].plot(data_new.iloc[i], marker='o')
+    axs[i].set_title(index[i])
+    axs[i].set_ylabel('Value')
+    axs[i].grid(True)
+
+# 调整布局
+plt.tight_layout()
+plt.show()
+
+
+
 # 标准化数据
 scaler = StandardScaler()
 data_new = data_new.T
