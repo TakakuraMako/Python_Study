@@ -89,7 +89,7 @@ for i in range(2):
 print(data_new)
 
 
-fig, axs = plt.subplots(len(index), 2, figsize=(20, 20))
+fig, axs = plt.subplots(len(index), 1, figsize=(20, 20))
 
 # 生成每个列的柱状图
 for i in range(len(index)):

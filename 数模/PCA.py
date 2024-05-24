@@ -30,6 +30,7 @@ k = np.argmax(cumulative_variance_ratio >= 0.85) + 1
 # 选择前 k 个主成分
 selected_eigenvectors = pca.components_[:k]
 principal_components_selected = principal_components[:, :k]
+principal_components_selected = principal_components
 
 # 创建包含主成分的数据框
 pca_df = pd.DataFrame(data=principal_components_selected, columns=[f'PC{i+1}' for i in range(k)])
@@ -37,7 +38,7 @@ pca_df['序号'] = df['序号']
 
 # 计算因子载荷矩阵
 # 因子载荷矩阵 = 标准化数据 * 选定的特征向量
-loadings_matrix = selected_eigenvectors.T * np.sqrt(pca.explained_variance_[:k])
+loadings_matrix = selected_eigenvectors.T * np.sqrt(pca.explained_variance_[:])
 
 # 创建因子载荷矩阵的数据框
 loadings_df = pd.DataFrame(data=loadings_matrix, columns=[f'PC{i+1}' for i in range(k)], index=data.columns)
@@ -48,7 +49,7 @@ pca_df['FinalScore'] = final_scores
 # 映射最终得分到0-100
 min_score = pca_df['FinalScore'].min()
 max_score = pca_df['FinalScore'].max()
-pca_df['MappedScore'] = 100 * (pca_df['FinalScore'] - min_score) / (max_score - min_score)
+pca_df['MappedScore'] = round(100 * (pca_df['FinalScore'] - min_score) / (max_score - min_score),2)
 
 # 根据最终得分进行排名
 pca_df['Rank'] = pca_df['FinalScore'].rank(ascending=False).astype('int32')
@@ -57,5 +58,11 @@ pca_df = pca_df.sort_values(by='Rank')
 # 输出因子载荷矩阵和最终得分
 print("因子载荷矩阵：")
 print(loadings_df)
+#loadings_df['Row_sum'] = loadings_df.apply(lambda x: x.sum(), axis=1)
+loadings_df.to_csv('./载荷因子.csv')
 print("\n主成分分析结果：")
 print(pca_df[['序号', 'MappedScore', 'Rank']])
+#pca_df.to_csv('./rank.csv')
+print(pca.explained_variance_)
+
+#PCA计算每一组的载荷矩阵，方差贡献率达到85%后确定前N个主成分，确定每个主成分最重要的几个因素，人为确定最重要的因素，相加到20位置

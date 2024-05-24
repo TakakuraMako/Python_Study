@@ -3,7 +3,14 @@ import math
 import pandas as pd
 # 初始奖金总额和人数
 x = 500000
-person = 20
+
+money = []
+data = pd.read_csv('./rank.csv')
+person = data.shape[0]
+for i in range(person):
+    money.append(round(data.iloc[i,-2]/data['MappedScore'].sum()*x,2))
+print(money)
+print(sum(money))
 '''
 # 奖金区间
 q = [50000, 35000, 23000, 11000, 5000, 0]
@@ -23,7 +30,7 @@ while i > 0:
 
 print(line)
 '''
-
+'''
 #5% 10% 15% 20%
 title = pd.DataFrame({
     '正高':[1, 1.1, 1.2, 1.3],
@@ -43,3 +50,5 @@ for i in range(len(ratio)):
     money.append(x / 3 / attribute[i])
 print(attribute)
 print(money)
+'''
+
