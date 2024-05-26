@@ -77,8 +77,9 @@ for i in range(len(csv_files)):
     data_new.loc['最高用电时段', _add] = max_hour
 print(data_new)
 
-fig, axs = plt.subplots(len(index), 1, figsize=(30, 40))
-
+fig, axs = plt.subplots(len(index), 1, figsize=(50, 30))
+#fig.subplots_adjust(wspace=0.3, hspace=0.3, bottom=0.1, top=0.2)
+#fig = plt.figure(dpi=200)
 # 生成每个列的柱状图
 for i in range(len(index)):
     axs[i].plot(data_new.iloc[i], marker='o')
@@ -87,7 +88,8 @@ for i in range(len(index)):
     axs[i].grid(True)
 
 # 调整布局
-plt.tight_layout()
+fig.subplots_adjust(left=0.05, right=0.95, bottom=0.05, top=0.95, hspace=0.5)
+#plt.tight_layout(h_pad=50)
 plt.show()
 
 # 标准化数据
@@ -96,7 +98,7 @@ data_new = data_new.T
 data_scaled = scaler.fit_transform(data_new)
 
 # 选择聚类算法（K-means）
-kmeans = KMeans(n_clusters=5, random_state=0)
+kmeans = KMeans(n_clusters=4, random_state=0)
 data_new['cluster'] = kmeans.fit_predict(data_scaled)
 
 # 聚类结果可视化，选择最高用电时段和日均值作为坐标轴
