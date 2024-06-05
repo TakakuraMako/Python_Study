@@ -59,10 +59,12 @@ labels, centroids = kmeans(data_zs, best_k)
 
 # 可视化结果
 plt.figure(figsize=(8, 6))
-plt.scatter(data_zs.values[:, 0], data_zs.values[:, 1], c=labels, cmap='viridis')
-plt.scatter(centroids[:, 0], centroids[:, 1], c='red', s=200, alpha=0.75)
+plt.scatter(data.values[:, 0], data.values[:, 1],c=labels, cmap='viridis')
+#plt.scatter(centroids[:, 0], centroids[:, 1], c='red', s=200, alpha=0.75)
 plt.xlabel(iris['feature_names'][0])
 plt.ylabel(iris['feature_names'][1])
 plt.title('K-means Clustering')
 plt.grid(True)
-plt.show()
+
+
+
