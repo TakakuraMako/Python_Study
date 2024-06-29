@@ -1,0 +1,12 @@
+from urllib.request import urlopen
+import requests
+'''
+resp = requests.get('https://www.baidu.com')
+with open('baidu.html',mode='w',encoding='utf-8') as f:
+    f.write(resp.text)
+    '''
+
+resp = urlopen('https://cn.bing.com')
+with open('baidu.html',mode='w',encoding='utf-8') as f:
+    f.write(resp.read().decode('utf-8'))
+print(resp.getcode())
