@@ -1,25 +1,43 @@
-import numpy as np
-import torch
-import matplotlib.pyplot as plt
+import networkx as nx
 
-# 创建一个模拟数据集
-data = torch.tensor([[25, 5, 50],[30, 3, 40],[35, 1, 20],[40,4,30],[45,6,35],[65,3,30]], dtype=torch.float32)
+# 创建有向图
+G = nx.DiGraph()
 
-# 初始化K个中心点
-K = 3
-centers = data[torch.randperm(data.shape[0])][:K]
+# 添加边及其容量和费用
+edges = [
+    ('A1','B1',4,6), ('A2','B1',8,5),
+ ('A2','B2',7,7), ('A3','B2',8,10),
+ ('B1','C1',10,7),('B1','C2',3,3),
+('B2','C1',4,5),('B2','C2',15,6),
+('B1','B1',5,4),
+]
 
-# KMeans算法主体
-for i in range(10):  # 迭代10次
-    # 步骤2：计算每个点到各个中心点的距离，并分配到最近的中心点
-    distances = torch.cdist(data, centers)
-    labels = torch.argmin(distances, dim=1)
+for u, v, capacity, cost in edges:
+    G.add_edge(u, v, capacity=capacity, weight=cost)
 
-    # 步骤3：重新计算中心点
-    for k in range(K):
-        centers[k] = data[labels == k].mean(dim=0)
+# 最小费用最大流算法
+flow_cost, flow_dict = nx.network_simplex(G)
 
-# 结果可视化
-plt.scatter(data[:, 0], data[:, 1], c=labels)
-plt.scatter(centers[:, 0], centers[:, 1], marker='x')
-plt.show()
+print("最小费用最大流的总费用：", flow_cost)
+print("流量分配：")
+for u, v, data in G.edges(data=True):
+    print(f"{u} -> {v}: {flow_dict[u][v]} (cost: {data['weight']}, capacity: {data['capacity']})")
+
+# 流量为22的最小费用
+G.add_node('source', demand=-22)
+G.add_node('sink', demand=22)
+
+# 重新定义流量需求
+for source in ['A1', 'A2', 'A3']:
+    G.add_edge('source', source, capacity=float('inf'), weight=0)
+
+for sink in ['C1', 'C2']:
+    G.add_edge(sink, 'sink', capacity=float('inf'), weight=0)
+
+flow_cost_22, flow_dict_22 = nx.network_simplex(G)
+
+print("流量为22的最小费用：", flow_cost_22)
+print("流量分配：")
+for u, v, data in G.edges(data=True):
+    if flow_dict_22[u][v] > 0:
+        print(f"{u} -> {v}: {flow_dict_22[u][v]} (cost: {data['weight']}, capacity: {data['capacity']})")

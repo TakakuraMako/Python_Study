@@ -2,11 +2,36 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.datasets import load_iris
+import seaborn as sns
 
 # 读取数据
 iris = load_iris()
 data = pd.DataFrame(iris['data'], columns=iris['feature_names'])
+def remove_outliers(df, column):
+    Q1 = df[column].quantile(0.25)
+    Q3 = df[column].quantile(0.75)
+    IQR = Q3 - Q1
+    lower_bound = Q1 - 1.5 * IQR
+    upper_bound = Q3 + 1.5 * IQR
+    return df[(df[column] >= lower_bound) & (df[column] <= upper_bound)]
 
+# 遍历所有特征列并去除异常值
+for column in data.columns:
+    data = remove_outliers(data, column)
+
+# 绘制箱线图
+plt.figure(figsize=(12, 6))
+sns.boxplot(data=data)
+plt.title('Box Plot of Iris Dataset Features')
+
+# 计算相关性矩阵
+corr_matrix = data.corr()
+
+# 绘制相关性矩阵热力图
+plt.figure(figsize=(10, 8))
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm', vmin=-1, vmax=1)
+plt.title('Heatmap of Correlation Matrix of Iris Dataset Features')
+plt.show()
 # 数据标准化
 data_zs = (data - data.mean()) / data.std()
 
@@ -65,6 +90,4 @@ plt.xlabel(iris['feature_names'][0])
 plt.ylabel(iris['feature_names'][1])
 plt.title('K-means Clustering')
 plt.grid(True)
-
-
-
+plt.show()
