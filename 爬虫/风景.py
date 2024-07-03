@@ -3,7 +3,7 @@ import re
 url = 'https://pic.netbian.com/4kfengjing/index'
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36 Edg/126.0.0.0'}
 obj = re.compile(r'<li><a.*?><img\ssrc="(?P<img>.*?)".*?"(?P<name>.*?)"')
-for page in range(1, 4):#只爬前三页
+for page in range(1, 6):#只爬前三页
     if page == 1:
         resp = requests.get(url = url + '.html', headers=headers)
     else:
