@@ -30,9 +30,8 @@ for index, row in data2.iloc[:, 3:4].iterrows():
     if row['销量(千克)'] >= up or row['销量(千克)'] <= low:
         data2 = data2.drop(index=index)
 
-
-print(data2.shape)
-
-plt.title("默认样式")
-plt.boxplot(data2.iloc[:, 3])
-plt.show()
+#计算每天品类销量
+data = pd.DataFrame({'花叶类':0, '花菜类':0, '水生根茎类':0, '茄类':0, '辣椒类':0, '食用菌':0},index=[0])
+for index, row in data2.iterrows():
+    data[row['品类']] += 1
+print(data)
