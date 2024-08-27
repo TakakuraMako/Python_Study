@@ -1,73 +1,84 @@
 import numpy as np
-from deap import base, creator, tools, algorithms
+import geatpy as ea
 import pandas as pd
-# 1. 数据加载与处理
-df_attachment3 = pd.read_excel('./附件3.xlsx')
-df_filtered_products = pd.read_excel('./问题三/筛选单品_进价.xlsx')
-df_prophet_results = pd.read_excel('./问题二/Prophet模型的预测结果.xlsx')
-df_attachment4 = pd.read_excel('./附件4.xlsx')
 
-# 筛选出61个单品
-df_filtered = df_filtered_products[df_filtered_products['日期'] == '2023-06-30']
-c_i = df_filtered['批发价格(元/千克)'].values  # 批发价格
-d_i = df_prophet_results[df_prophet_results['ds'] == '2023-07-01']['yhat'].values  # 需求预测
-a_i = df_attachment4['平均损耗率(%)_小分类编码_不同值'].values / 100  # 损耗率
+# 读取数据
+df_1 = pd.read_excel('附件3.xlsx', sheet_name="Sheet1")  # 批发价格数据
+df_4 = pd.read_excel('附件4.xlsx', sheet_name="Sheet1")  # 损耗率数据
 
-n = len(c_i)  # 单品数量
-beta_0 = np.random.uniform(0.5, 2.0, n)  # 随机生成，实际需根据数据调整
-beta_1 = np.random.uniform(0.01, 0.05, n)  # 随机生成，实际需根据数据调整
+a_i = df_4["损耗率"].values  # 损耗率
+c_i = df_1["批发价格"].values  # 批发价格
+beta_0 = df_1["beta0"].values  # beta0 系数
+beta_1 = df_1["beta1"].values  # beta1 系数
 
-# 2. 定义遗传算法的环境
-creator.create("FitnessMax", base.Fitness, weights=(1.0,))
-creator.create("Individual", list, fitness=creator.FitnessMax)
+# 问题类定义
+class MyProblem(ea.Problem):  # 继承Problem父类
+    def __init__(self):
+        name = 'MyProblem'  # 初始化name
+        M = 1  # 初始化M (目标维数)
+        maxormins = [-1]  # 初始化maxormins (目标最小化)
+        Dim = 58 * 2 + 6  # 初始化Dim (决策变量维数)
+        varTypes = [1] * 58 + [0] * 58 + [1] * 6 + [1] * 6  # 决策变量的类型
+        lb = [0] * 58 + [c_i[i] for i in range(58)] + [0] * 6 + [0] * 6  # 决策变量下界
+        ub = [1] * 58 + [50] * 58 + [1] * 6 + [1] * 6  # 决策变量上界
+        lbin = [1] * Dim  # 决策变量下边界
+        ubin = [1] * Dim  # 决策变量上边界
 
-toolbox = base.Toolbox()
+        # 调用父类构造方法完成实例化
+        ea.Problem.__init__(self, name, M, maxormins, Dim, varTypes, lb, ub, lbin, ubin)
 
-# 决策变量：x_i 表示是否选择该单品（0或1），y_i 表示进货量，z_i 表示定价
-toolbox.register("attr_bool", np.random.randint, 2)
-toolbox.register("attr_float", np.random.uniform, 2.5, 50)
-toolbox.register("individual", tools.initCycle, creator.Individual,
-                 (toolbox.attr_bool, toolbox.attr_float, toolbox.attr_float), n=n)
-toolbox.register("population", tools.initRepeat, list, toolbox.individual)
+    def aimFunc(self, pop):  # 目标函数
+        Vars = pop.Phen  # 得到决策变量矩阵
+        x = Vars[:, 0:58]  # 进货量
+        y = Vars[:, 58:116]  # 定价
+        u = Vars[:, 116:122]  # 辅助变量 u_j
+        v = Vars[:, 122:128]  # 辅助变量 v_j
+        z = (y - beta_0) / beta_1  # 利用定价计算z_i
+        
+        # 计算总利润
+        profit = np.sum((1 - a_i) * (z - c_i) * y * x, axis=1)
+        # 添加约束条件
+        cons1 = np.sum(x, axis=1) - 33
+        cons2 = 27 - np.sum(x, axis=1)
+        cons3 = y - 50 * x
+        cons4 = 2.5 * x - y
+        cons5 = u * (0.6 * np.sum(d, axis=1) - np.sum(y, axis=1))
+        cons6 = v * (np.sum(y, axis=1) - np.sum(d, axis=1))
+        cons7 = 5 - np.sum(u, axis=1)
+        cons8 = 5 - np.sum(v, axis=1)
+        
+        # 将约束加入惩罚项
+        pop.ObjV = profit - 1e6 * (np.maximum(0, cons1) + np.maximum(0, cons2) + np.maximum(0, cons3) +
+                                    np.maximum(0, cons4) + np.maximum(0, cons5) + np.maximum(0, cons6) +
+                                    np.maximum(0, cons7) + np.maximum(0, cons8))
 
-# 目标函数定义
-def evalProfit(individual):
-    x = np.array(individual[:n])
-    y = np.array(individual[n:2*n])
-    z = np.array(individual[2*n:])
+# 实例化问题对象
+problem = MyProblem()
 
-    # 计算利润
-    profit = np.sum((1 - a_i) * (z - c_i) * y * x)
-    return profit,
+# 算法参数设置
+Encoding = "RI"  # 实整数编码
+NIND = 200  # 种群规模
+Field = ea.crtfld(Encoding, problem.varTypes, problem.ranges, problem.borders)  # 创建区域描述器
+population = ea.Population(Encoding, Field, NIND)
 
-# 注册遗传算法操作
-toolbox.register("evaluate", evalProfit)
-toolbox.register("mate", tools.cxTwoPoint)
-toolbox.register("mutate", tools.mutFlipBit, indpb=0.05)
-toolbox.register("select", tools.selTournament, tournsize=3)
+myAlgorithm = ea.soea_DE_best_1_L_templet(problem, population)  # 使用差分进化算法
+myAlgorithm.MAXGEN = 2000  # 最大进化次数
+myAlgorithm.mutOper.F = 0.5  # 突变概率
+myAlgorithm.recOper.XOVR = 0.7  # 交叉概率
+myAlgorithm.logTras = 0  # 不打印日志
+myAlgorithm.verbose = False  # 不输出日志
+myAlgorithm.drawing = 1  # 绘图
 
-# 3. 设置遗传算法的参数
-population = toolbox.population(n=300)
-NGEN = 2000
-CXPB = 0.7  # 交叉概率
-MUTPB = 0.5  # 突变概率
+# 种群进化
+[BestIndi, population] = myAlgorithm.run()  # 执行算法模板，得到最优个体及最后一代种群
 
-# 4. 运行遗传算法
-for gen in range(NGEN):
-    offspring = algorithms.varAnd(population, toolbox, cxpb=CXPB, mutpb=MUTPB)
-    fits = toolbox.map(toolbox.evaluate, offspring)
-    for fit, ind in zip(fits, offspring):
-        ind.fitness.values = fit
-
-    population = toolbox.select(offspring, k=len(population))
-
-# 5. 获取结果
-best_individual = tools.selBest(population, k=1)[0]
-optimal_x = best_individual[:n]
-optimal_y = best_individual[n:2*n]
-optimal_z = best_individual[2*n:]
-
-print("最优进货决策：", optimal_x)
-print("最优进货量：", optimal_y)
-print("最优定价策略：", optimal_z)
-print("最大利润：", evalProfit(best_individual)[0])
+# 输出结果
+print('评价次数：%s' % (myAlgorithm.evalsNum))
+print('花费时间 %s 秒' % (myAlgorithm.passTime))
+if BestIndi.sizes != 0:
+    print("最优的目标函数值为 %s" % BestIndi.ObjV[0][0])
+    print("最优决策变量:")
+    for i in range(BestIndi.Phen.shape[1]):
+        print(BestIndi.Phen[0, i])
+else:
+    print("未找到解")
