@@ -14,6 +14,7 @@ def table_1():
     plt.yticks(np.arange(0.0, max(U_m)+1))
     plt.xlabel('探测线圈转角' + r'$ \theta/° $')
     plt.ylabel(r'$ \epsilon_{max} $')
+    plt.title('探测线圈法线与磁场方向不同夹角数据记录')
     for xi, yi in zip(theta, U_m):
         plt.text(xi-5, yi+0.3, yi)
     plt.grid()
@@ -36,9 +37,9 @@ def table_2():
     plt.plot(x_1, B_m, marker = 'o')
     plt.plot(x_1, B_lilun, marker = '*')
     plt.xticks(np.arange(-10, 11, 2))
-    plt.yticks(np.arange(0.0, max(max(B_m), max(B_lilun))))
     plt.xlabel('轴向距离' + r'$ x/cm $')
     plt.ylabel(r'$ B / mT $')
+    plt.title('圆电流线圈轴上磁场分布的数据')
     plt.grid()
     plt.show()
 
@@ -47,13 +48,34 @@ def table_3():
     x = np.arange(-5.0, 6.0, 1)
     U_m = [15.5, 14.6, 13.6, 13.1, 12.7, 12.6, 12.6, 12.9, 13.4, 14.1, 15.4]
     B_m = [round(x * 0.103, 3) for x in U_m]
-    print(B_m)
+    print(f'B_m:{B_m}')
+    plt.figure()
+    plt.plot(x, B_m, marker = 'o')
+    plt.xticks(x)
+    plt.xlabel('径向距离' + r'$ x/cm $')
+    plt.ylabel(r'$ B_m/mT $')
+    plt.title('测量圆电流线圈沿径向的磁场分布')
+    for xi, yi in zip(x, B_m):
+        plt.text(xi, yi+0.01, yi)
+    plt.grid()
+    plt.show()
 
 def table_4():
     x = np.arange(-10, 11, 1)
     U_m = [10.8, 12.4, 14.5, 16.7, 18.5, 19.3, 19.5, 19.0, 18.3, 17.7, 17.4, 17.5, 18.0, 18.7, 19.2, 19.3, 18.3, 16.6, 15.1, 12.9, 11.5]
     B_m = [round(x * 0.103, 2) for x in U_m]
     print(f'B_m:{B_m}')
+    plt.figure()
+    plt.plot(x, B_m, marker = 'o')
+    plt.xticks(x)
+    plt.xlabel('轴向距离' + r'$ x/cm $')
+    plt.yticks(np.arange(0, max(B_m)))
+    plt.ylabel(r'$ B_m/mT $')
+    plt.title('亥姆霍兹圈轴线上的磁场分布')
+    for xi, yi in zip(x, B_m):
+        plt.text(xi, yi+0.01, yi)
+    plt.grid()
+    plt.show()
 
 def table_5():
     f = range(50, 160, 10)
@@ -62,6 +84,17 @@ def table_5():
     for i in range(len(f)):
         B_m.append(round(5.171 * U_m[i] / f[i], 2))
     print(f'B_m{B_m}')
+    plt.figure()
+    plt.plot(f, B_m, marker = 'o')
+    plt.xticks(f)
+    plt.xlabel('励磁电流频率' + r'$ f/Hz $')
+    plt.yticks(np.arange(0, math.ceil(max(B_m))+1))
+    plt.ylabel(r'$ B_m/mT $')
+    plt.title('励磁电流频率变化对磁场的影响')
+    for xi, yi in zip(f, B_m):
+        plt.text(xi, yi+0.01, yi)
+    plt.grid()
+    plt.show()
 
 def table_6():
     x = range(-10, 11, 1)
@@ -70,4 +103,14 @@ def table_6():
     B_2R = [round(0.103 * x , 2) for x in U_2R]
     B_halfR = [round(0.103 * x , 2) for x in U_halfR]
     print(f'B_2R:{B_2R}\nB_halfR:{B_halfR}')
+    plt.figure()
+    plt.plot(x, B_2R, marker = 'o', label = r'$d=2r$')
+    plt.plot(x, B_halfR, marker = '*', label = r'$d=1/2r$')
+    plt.xticks(x)
+    plt.xlabel('轴向距离' + r'$ x/cm $')
+    plt.yticks(np.arange(0, math.ceil(max(max(B_2R), max(B_halfR)))+1))
+    plt.ylabel(r'$ B/mT $')
+    plt.title('改变两圆线圈间距后轴线上磁场分布')
+    plt.grid()
+    plt.show()
 table_2()
