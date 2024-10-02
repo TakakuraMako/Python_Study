@@ -1,4 +1,4 @@
-import tkinter as tk  # 导入 tkinter 库，这是一种工具，可以帮助我们用 Python 创建图形界面。
+import tkinter as tk  # 导入 tkinter 库，创建图形界面。
 from tkinter import messagebox
 
 class wuziqi:  # 定义一个名为 "wuziqi" 的类，表示我们的五子棋游戏。
@@ -46,7 +46,7 @@ class wuziqi:  # 定义一个名为 "wuziqi" 的类，表示我们的五子棋�
         # 检查每一行
         for row in self.board:  # 遍历棋盘的每一行
             # 把这一行的内容变成一个字符串，检查里面是否有五个 'X' 或五个 'O' 连在一起。
-            if 'XXXXX' in ''.join(row) or 'OOOOO' in ''.join(row):
+            if 'XXXXXX' in ''.join(row) or 'OOOOOO' in ''.join(row):
                 return True  # 找到五个相同的棋子就返回 True，表示有玩家赢了。
 
         # 检查每一列
@@ -54,7 +54,7 @@ class wuziqi:  # 定义一个名为 "wuziqi" 的类，表示我们的五子棋�
             # 收集这一列的所有棋子，放进一个列表里。
             column = [self.board[row][col] for row in range(self.board_size)]
             # 把这一列的内容变成一个字符串，检查里面是否有五个相同的棋子。
-            if 'XXXXX' in ''.join(column) or 'OOOOO' in ''.join(column):
+            if 'XXXXXX' in ''.join(column) or 'OOOOOO' in ''.join(column):
                 return True  # 找到五个相同的棋子就返回 True。
 
         # 从左边界的每一行出发，检查正对角线 (从左上到右下)
@@ -62,7 +62,7 @@ class wuziqi:  # 定义一个名为 "wuziqi" 的类，表示我们的五子棋�
             diag = []  # 用来存储当前对角线上的棋子
             for i in range(self.board_size - row):  # 对角线最大长度为 board_size - row
                 diag.append(self.board[row + i][i])  # 行列同步增长，形成正对角线
-            if 'XXXXX' in ''.join(diag) or 'OOOOO' in ''.join(diag):  # 检查五子连珠
+            if 'XXXXXX' in ''.join(diag) or 'OOOOOO' in ''.join(diag):  # 检查五子连珠
                 return True
 
         # 从上边界的每一列出发，检查正对角线 (从左上到右下)
@@ -70,7 +70,7 @@ class wuziqi:  # 定义一个名为 "wuziqi" 的类，表示我们的五子棋�
             diag = []  # 用来存储当前对角线上的棋子
             for i in range(self.board_size - col):  # 对角线最大长度为 board_size - col
                 diag.append(self.board[i][col + i])  # 行列同步增长，形成正对角线
-            if 'XXXXX' in ''.join(diag) or 'OOOOO' in ''.join(diag):  # 检查五子连珠
+            if 'XXXXXX' in ''.join(diag) or 'OOOOOO' in ''.join(diag):  # 检查五子连珠
                 return True
 
         # 从左边界的每一行出发，检查反对角线 (从右上到左下)
@@ -78,7 +78,7 @@ class wuziqi:  # 定义一个名为 "wuziqi" 的类，表示我们的五子棋�
             diag = []  # 用来存储当前对角线上的棋子
             for i in range(self.board_size - row):  # 对角线最大长度为 board_size - row
                 diag.append(self.board[row + i][self.board_size - 1 - i])  # 行增加，列减少，形成反对角线
-            if 'XXXXX' in ''.join(diag) or 'OOOOO' in ''.join(diag):  # 检查五子连珠
+            if 'XXXXXX' in ''.join(diag) or 'OOOOOO' in ''.join(diag):  # 检查五子连珠
                 return True
 
         # 从下边界的每一列出发，检查反对角线 (从右上到左下)
@@ -86,12 +86,12 @@ class wuziqi:  # 定义一个名为 "wuziqi" 的类，表示我们的五子棋�
             diag = []  # 用来存储当前对角线上的棋子
             for i in range(self.board_size - col):  # 对角线最大长度为 board_size - col
                 diag.append(self.board[i][self.board_size - 1 - (col + i)])  # 行增加，列减少，形成反对角线
-            if 'XXXXX' in ''.join(diag) or 'OOOOO' in ''.join(diag):  # 检查五子连珠
+            if 'XXXXXX' in ''.join(diag) or 'OOOOOO' in ''.join(diag):  # 检查五子连珠
                 return True
 
         return False  # 如果找不到胜利的条件，返回 False，表示没有玩家赢。
 
-    def reset_game(self):  # 这个方法用于重置游戏状态，准备下一局
+    def reset_game(self):  # 这个方法用于重置游戏状态，准备下一局 '    o   x     '
         for i in range(self.board_size):  # 遍历棋盘的行
             for j in range(self.board_size):  # 遍历棋盘的列
                 self.buttons[i][j]['text'] = ' '  # 清空按钮上的文本，恢复到初始状态
