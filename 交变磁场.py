@@ -113,4 +113,4 @@ def table_6():
     plt.title('改变两圆线圈间距后轴线上磁场分布')
     plt.grid()
     plt.show()
-table_2()
+table_5()
