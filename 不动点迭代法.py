@@ -10,9 +10,7 @@ count = 0
 while(true):
     print(float(x_old))
     x_new = phi_x.subs(x, x_old)
-    # if abs(x_old - x_new) < accuracy:
-    #     break
-    if count > 25:
+    if abs(x_old - x_new) < accuracy:
         break
     if abs(x_old - x_new) > abs(a-b):
         print('发散')
