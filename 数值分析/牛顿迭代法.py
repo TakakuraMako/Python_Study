@@ -6,8 +6,8 @@ plt.rcParams['font.sans-serif']=['SimSun'] #宋体
 plt.rcParams['axes.unicode_minus'] = False 
 
 x = symbols('x')
-f_x = (x-10)**3
-x_0 = 1
+f_x = (x+1)*(x-1)**3
+x_0 = 1.5
 accuracy = decimal.Decimal(2**-5)
 x_star = []
 f_x_star = []
