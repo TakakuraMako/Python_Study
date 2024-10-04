@@ -1,24 +1,27 @@
 from sympy import *
 import decimal
+import numpy as np
 x = symbols('x')
-str = input("函数：")
-y1 = 0
-a = decimal.Decimal(input("下限"))
-b = decimal.Decimal(input("上限"))
-accuracy = decimal.Decimal(eval(input("精确度")))
-
-f_x = sympify(str)
+# str = input("函数：")
+# a = decimal.Decimal(input("下限"))
+# b = decimal.Decimal(input("上限"))
+# accuracy = decimal.Decimal(eval(input("精确度")))
+a = decimal.Decimal(0)
+b = decimal.Decimal(1)
+accuracy = decimal.Decimal(2**-5)
+f_x = exp(-x) - sin(pi*x/2)
+x_old = a
 while(true):
-    y2 = f_x.subs(x,(a+b)/2)
-    #print(float(y2))
-    if y2 == 0:
-        print((a + b)/2)
+    x_new = (a+b)/2
+    y = f_x.subs(x, x_new)
+    if y == 0:
+        print(x_new)
         break
-    elif abs(y1 - y2) < accuracy:
-        print((a + b)/2)
+    elif abs(x_old - x_new) < accuracy:
         break
-    elif y2*f_x.subs(x,a) > 0:
+    elif y*f_x.subs(x,a) > 0:
         a = (a + b)/2
-    elif y2*f_x.subs(x,a) < 0:
+    elif y*f_x.subs(x,a) < 0:
         b = (a + b)/2
-    
+    x_old = x_new
+    print(x_old)

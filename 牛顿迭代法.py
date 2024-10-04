@@ -21,9 +21,9 @@ while true:
     x_0 = x_new
 plt.figure()
 plt.plot(x_star, f_x_star)
-plt.xlim = range(-10,10)
-plt.xticks = range(-10,10)
-plt.yticks = range(-10, 10)
+plt.xlim = range(-5,5)
+plt.xticks = range(-5,5)
+plt.yticks = range(-5, 5)
 plt.xlabel(r'$x*$')
 plt.ylabel(r'$f(x*)$')
 plt.grid()
