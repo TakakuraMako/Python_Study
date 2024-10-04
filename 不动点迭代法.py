@@ -6,7 +6,6 @@ b = decimal.Decimal(2)
 accuracy = decimal.Decimal(2**-5)
 phi_x = 1/2*(10 - x**3)**(1/2)
 x_old = (a+b)/2
-count = 0
 while(true):
     print(float(x_old))
     x_new = phi_x.subs(x, x_old)
@@ -16,4 +15,3 @@ while(true):
         print('发散')
         break
     x_old = x_new
-    count += 1
