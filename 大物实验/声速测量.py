@@ -24,3 +24,4 @@ for i in range(len(dx)):
     temp += (dx_average - dx[i])**2
 S_x = round(sqrt(temp / 9), 4)
 print(S_x)
+print(331.21*sqrt(1+22.5/237.15))
