@@ -8,26 +8,23 @@ def table2():
     U_Ak = np.arange(-2.0, 0.0, 0.1)
     U_Ak = np.append(U_Ak, np.arange(0.0, 18.0, 3))
     U_Ak = np.append(U_Ak, np.array([18.0, 20.0]))
-    I = np.array([-0.0248, -0.0174, -0.0121, 0.0194, 0.0615, 0.1569,
-                0.04, 0.055, 0.086, 0.122, 0.133, 0.188, 0.822, 0.916, 1.080, 1.229, 1.392, 1.574, 1.692, 1.880,
-                0.6, 3.82, 7.62, 12.64, 15.85, 18.64,
-                21.4, 23.4])
+    I = np.array([-0.36, -0.34, -0.33, -0.3, -0.27, -0.2, -0.1, 0.01, 0.17, 0.33, 0.43, 0.68, 0.85, 1.0, 1.27, 1.51, 1.72, 2.05, 2.24, 2.56, 3.2, 14.1, 27.3, 35.8, 43.8, 50.2, 56.2, 59.7])
     model = LinearRegression()  # 创建一个回归分析对象
-    model.fit(U_Ak.reshape(-1, 1), I.reshape(-1, 1))  # 对x和y进行拟合
+    model.fit(I.reshape(-1, 1), U_Ak.reshape(-1, 1))  # 对x和y进行拟合
     print('系数:', model.coef_[0])
     print('截距:', model.intercept_)
     plt.figure()
-    plt.plot(U_Ak, I, '.')
+    plt.plot(I, U_Ak, 'o')
     plt.plot(I, I*model.coef_[0]+model.intercept_)
     plt.grid(True)
     plt.title('伏安特性曲线  ' + r'$\lambda=365mm, \phi=4$')
     plt.ylabel('电压 ' + r'$U_{Ak}/V$')
-    plt.xlabel('电流 ' + r'$I/10^{-10}A$')
+    plt.xlabel('电流 ' + r'$I/10^{-12}A$')
     plt.show()
 
 def table1():
     f = np.array([8.216, 7.410, 6.882, 5.492, 5.198])
-    delta_U = np.array([-1.8016, -1.5124, -1.3356, -0.713, -0.5816])
+    delta_U = np.array([-1.428, -0.994, -0.858, -0.514, -0.436])
     model = LinearRegression()  # 创建一个回归分析对象
     model.fit(f.reshape(-1, 1), delta_U.reshape(-1, 1))  # 对x和y进行拟合
     print('系数:', model.coef_[0])
@@ -40,4 +37,4 @@ def table1():
     plt.ylabel(r'$U/V$')
     plt.show()
 
-table2()
+table1()

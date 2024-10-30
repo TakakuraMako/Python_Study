@@ -5,6 +5,10 @@ from pmdarima import auto_arima
 from statsmodels.tsa.arima.model import ARIMA
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 
+# 设置中文字体
+plt.rcParams['font.sans-serif'] = ['SimSun']  # 宋体
+plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
+
 # 数据读取和处理
 file_path = './时间序列分析/weather北京.csv'
 df = pd.read_csv(file_path, encoding='gbk')
@@ -23,12 +27,16 @@ plt.figure(figsize=(12, 6))
 # ACF 图
 plt.subplot(121)
 plot_acf(temp_data, ax=plt.gca(), lags=20)
-plt.title('ACF of Original Data')
+plt.title('原始数据的自相关图 (ACF)', fontsize=12)
+plt.xlabel('滞后期', fontsize=12)
+plt.ylabel('自相关系数', fontsize=12)
 
 # PACF 图
 plt.subplot(122)
 plot_pacf(temp_data, ax=plt.gca(), lags=20)
-plt.title('PACF of Original Data')
+plt.title('原始数据的偏自相关图 (PACF)', fontsize=12)
+plt.xlabel('滞后期', fontsize=12)
+plt.ylabel('偏自相关系数', fontsize=12)
 
 plt.tight_layout()
 plt.show()
@@ -57,12 +65,16 @@ plt.figure(figsize=(12, 6))
 # ACF 图（差分后的数据）
 plt.subplot(121)
 plot_acf(diff_temp, ax=plt.gca(), lags=20)
-plt.title(f'Differenced ACF (d={d_value})')
+plt.title(f'差分后的自相关图 (d={d_value})', fontsize=12)
+plt.xlabel('滞后期', fontsize=12)
+plt.ylabel('自相关系数', fontsize=12)
 
 # PACF 图（差分后的数据）
 plt.subplot(122)
 plot_pacf(diff_temp, ax=plt.gca(), lags=20)
-plt.title(f'Differenced PACF (d={d_value})')
+plt.title(f'差分后的偏自相关图 (d={d_value})', fontsize=12)
+plt.xlabel('滞后期', fontsize=12)
+plt.ylabel('偏自相关系数', fontsize=12)
 
 plt.tight_layout()
 plt.show()
@@ -78,12 +90,12 @@ print(forecast_mean)
 
 # 可视化预测结果
 plt.figure(figsize=(10, 6))
-plt.plot(temp_data.index, temp_data['平均温'], label='Observed Avg Temp')
+plt.plot(temp_data.index, temp_data['平均温'], label='实际观测平均温度')
 forecast_dates = pd.date_range(temp_data.index[-1] + pd.Timedelta(days=1), periods=10)
-plt.plot(forecast_dates, forecast_mean, label='Predicted Avg Temp (ARIMA)', linestyle='--', color='red')
+plt.plot(forecast_dates, forecast_mean, label='预测平均温度 (ARIMA)', linestyle='--', color='red')
 plt.fill_between(forecast_dates, forecast_conf_int.iloc[:, 0], forecast_conf_int.iloc[:, 1], color='red', alpha=0.3)
-plt.title(f'Average Temperature Forecast using ARIMA {auto_model.order}')
-plt.xlabel('Date')
-plt.ylabel('Temperature (°C)')
+plt.title(f'基于 ARIMA{auto_model.order} 模型的平均温度预测', fontsize=12)
+plt.xlabel('日期', fontsize=12)
+plt.ylabel('温度 (°C)', fontsize=12)
 plt.legend()
 plt.show()
