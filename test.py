@@ -1,4 +1,5 @@
 import decimal
 import math
 from sympy import *
-print(math.degrees(math.atan(1)))
+list1 = list(range(2000, 2017, 1))
+print(list1)

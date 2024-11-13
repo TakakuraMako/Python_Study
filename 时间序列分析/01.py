@@ -10,16 +10,12 @@ plt.rcParams['font.sans-serif'] = ['SimSun']  # 宋体
 plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
 
 # 数据读取和处理
-file_path = './时间序列分析/weather北京.csv'
+file_path = './时间序列分析/data.csv'
 df = pd.read_csv(file_path, encoding='gbk')
-df['最高温'] = df['最高温'].str.replace('°', '').astype(int)
-df['最低温'] = df['最低温'].str.replace('°', '').astype(int)
 df['日期'] = pd.to_datetime(df['日期'].str.strip())
 df.set_index('日期', inplace=True)
 
-# 计算平均温度
-df['平均温'] = (df['最高温'] + df['最低温']) / 2
-temp_data = df[['平均温']]
+temp_data = df[['平均温度']]
 
 # 绘制原始数据的 ACF 和 PACF 图
 plt.figure(figsize=(12, 6))

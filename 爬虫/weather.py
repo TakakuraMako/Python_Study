@@ -16,11 +16,11 @@ headers = {
 params = {
     'areaInfo[areaId]': 54511,
     'areaInfo[areaType]': 2,
-    'date[year]': 2022,
+    'date[year]': 2016,
     'date[month]': 7,
 }
 
-obj = re.compile(r'(?P<date>2022-\d\d-\d\d)\s(?P<week>.*?)<[\s\S]*?">(?P<higest>.*?)<[\s\S]*?;.*?>(?P<lowest>.*?)<[\s\S]*?<td>(?P<weather>.*?)<[\s\S]*?<td>(?P<wind>.*?)<[\s\S]*?">(?P<air>.*?)<')
+obj = re.compile(r'(?P<date>2016-\d\d-\d\d)\s(?P<week>.*?)<[\s\S]*?">(?P<higest>.*?)<[\s\S]*?;.*?>(?P<lowest>.*?)<[\s\S]*?<td>(?P<weather>.*?)<[\s\S]*?<td>(?P<wind>.*?)<[\s\S]*?">(?P<air>.*?)<')
 
 for city in range(len(cities)):
     params['areaInfo[areaId]'] = code[city]
@@ -36,7 +36,8 @@ for city in range(len(cities)):
             new = pd.DataFrame([[i.group('date').strip(), i.group('week').strip(), i.group('higest').strip(), i.group('lowest').strip(), i.group('weather').strip(), i.group('wind').strip(), i.group('air').strip()]],columns=lable)
             data = pd.concat([data,new])
     data['日期'] = '\t' + data['日期']
-    data.to_csv(f'weather{cities[city]}.csv',encoding='GBK',index=None)
+    data.to_csv(f'2016weather{cities[city]}.csv',encoding='GBK',index=None)
+    break
 
 
 
