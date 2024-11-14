@@ -1,5 +1,1 @@
-import decimal
-import math
-from sympy import *
-list1 = list(range(2000, 2017, 1))
-print(list1)
+dic = {'棒' : 2, '是' : 1, '否' : 0}
