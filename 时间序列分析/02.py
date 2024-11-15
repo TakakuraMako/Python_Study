@@ -1,11 +1,9 @@
-# 加载用户上传的文件并重新执行数据清洗、ACF和PACF分析、SARIMA预测流程
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
 from statsmodels.tsa.statespace.sarimax import SARIMAX
-
+from statsmodels.tsa.stattools import adfuller
 # 解决中文显示问题
 plt.rcParams['font.sans-serif'] = ['SimHei']  # 用于显示中文标签
 plt.rcParams['axes.unicode_minus'] = False    # 解决负号显示问题
@@ -30,4 +28,11 @@ def original_plot():
 
     # 显示图表
     plt.show()
-original_plot()
+
+def ADF():
+    adf_test = adfuller(temperature_data['AverageTemperature'], autolag='AIC')
+    adf_result = {
+        'ADF Statistic': adf_test[0],
+        'p-value': adf_test[1],
+        'Critical Values': adf_test[4]
+    }
