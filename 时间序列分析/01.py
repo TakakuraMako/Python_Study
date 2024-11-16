@@ -1,97 +1,78 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from pmdarima import auto_arima
-from statsmodels.tsa.arima.model import ARIMA
-from statsmodels.graphics.tsaplots import plot_acf, plot_pacf
+from statsmodels.tsa.seasonal import seasonal_decompose
+from sklearn.linear_model import LinearRegression
 
-# 设置中文字体
-plt.rcParams['font.sans-serif'] = ['SimSun']  # 宋体
-plt.rcParams['axes.unicode_minus'] = False  # 解决负号显示问题
+# 解决中文显示问题
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 用于显示中文标签
+plt.rcParams['axes.unicode_minus'] = False    # 解决负号显示问题
 
-# 数据读取和处理
-file_path = './时间序列分析/data.csv'
-df = pd.read_csv(file_path, encoding='gbk')
-df['日期'] = pd.to_datetime(df['日期'].str.strip())
-df.set_index('日期', inplace=True)
+# 读取数据
+file_path = './时间序列分析/北京日均气温2000-2023.xlsx'
+data = pd.read_excel(file_path)
 
-temp_data = df[['平均温度']]
+# 将'Date'列转换为日期格式，并设置为索引
+data['Date'] = pd.to_datetime(data['Date'])
+data.set_index('Date', inplace=True)
 
-# 绘制原始数据的 ACF 和 PACF 图
+# 步骤1：直接过滤低于-20度的气温数据
+data_cleaned = data[data['AverageTemperature'] > -19.6]
+
+# 步骤2：按月计算每月的均值和标准差，使用3-Sigma方法
+data_cleaned['Month'] = data_cleaned.index.to_period('M')
+monthly_stats = data_cleaned.groupby('Month')['AverageTemperature'].agg(['mean', 'std']).reset_index()
+monthly_stats.columns = ['Month', 'MeanTemp', 'StdTemp']
+
+# 将每月的统计数据合并回原始数据，应用3-Sigma规则筛选数据
+data_cleaned = data_cleaned.reset_index().merge(monthly_stats, on='Month', how='left')
+data_cleaned = data_cleaned[(data_cleaned['AverageTemperature'] >= data_cleaned['MeanTemp'] - 3 * data_cleaned['StdTemp']) &
+                            (data_cleaned['AverageTemperature'] <= data_cleaned['MeanTemp'] + 3 * data_cleaned['StdTemp'])]
+
+# 再次将' Date'列设置为索引
+data_cleaned.set_index('Date', inplace=True)
+
+# 绘制每日温度图，空缺值不显示
 plt.figure(figsize=(12, 6))
-
-# ACF 图
-plt.subplot(121)
-plot_acf(temp_data, ax=plt.gca(), lags=20)
-plt.title('原始数据的自相关图 (ACF)', fontsize=12)
-plt.xlabel('滞后期', fontsize=12)
-plt.ylabel('自相关系数', fontsize=12)
-
-# PACF 图
-plt.subplot(122)
-plot_pacf(temp_data, ax=plt.gca(), lags=20)
-plt.title('原始数据的偏自相关图 (PACF)', fontsize=12)
-plt.xlabel('滞后期', fontsize=12)
-plt.ylabel('偏自相关系数', fontsize=12)
-
-plt.tight_layout()
+plt.plot(data_cleaned['AverageTemperature'], marker='.', linestyle='-', markersize=2, alpha=0.7)
+plt.title('每日平均气温（清洗后）')
+plt.xlabel('日期')
+plt.ylabel('气温 (°C)')
+plt.grid(True)
 plt.show()
 
-# 自动选择 ARIMA 模型的参数 (p, d, q)
-auto_model = auto_arima(temp_data, start_p=1, start_q=1, max_p=5, max_q=5, seasonal=False, 
-                        stepwise=True, trace=True, error_action='ignore', suppress_warnings=True)
+# 绘制2001年每个月的箱线图
+data_2001 = data_cleaned[data_cleaned.index.year == 2001]
+data_2001['Month'] = data_2001.index.month  # 添加‘Month’列便于分组
 
-# 输出选择的最佳参数
-print(f"最佳 ARIMA 模型参数 (p, d, q): {auto_model.order}")
-
-# 使用自动选择的 ARIMA 模型进行拟合
-model = ARIMA(temp_data, order=auto_model.order)
-result = model.fit()
-
-# 打印模型摘要
-print(result.summary())
-
-# 进行差分处理（根据自动选择的 d 值进行差分）
-d_value = auto_model.order[1]  # d 值，自动选择的差分阶数
-diff_temp = temp_data.diff(d_value).dropna()
-
-# 绘制差分后的 ACF 和 PACF 图
 plt.figure(figsize=(12, 6))
-
-# ACF 图（差分后的数据）
-plt.subplot(121)
-plot_acf(diff_temp, ax=plt.gca(), lags=20)
-plt.title(f'差分后的自相关图 (d={d_value})', fontsize=12)
-plt.xlabel('滞后期', fontsize=12)
-plt.ylabel('自相关系数', fontsize=12)
-
-# PACF 图（差分后的数据）
-plt.subplot(122)
-plot_pacf(diff_temp, ax=plt.gca(), lags=20)
-plt.title(f'差分后的偏自相关图 (d={d_value})', fontsize=12)
-plt.xlabel('滞后期', fontsize=12)
-plt.ylabel('偏自相关系数', fontsize=12)
-
-plt.tight_layout()
+data_2001.boxplot(column='AverageTemperature', by='Month')
+plt.title('2001年每月温度箱线图')
+plt.suptitle('')  # 移除默认标题
+plt.xlabel('月')
+plt.ylabel('温度(°C)')
+plt.grid(True)
 plt.show()
 
-# 预测未来 10 天的平均温度
-forecast = result.get_forecast(steps=10)
-forecast_mean = forecast.predicted_mean
-forecast_conf_int = forecast.conf_int()
+# 步骤3：基于3-Sigma清洗后的data_cleaned，使用IQR方法进一步去除异常值
+data_cleaned['Month'] = data_cleaned.index.month  # 按月分组处理
 
-# 打印预测结果
-print("未来10天的平均温度预测：")
-print(forecast_mean)
+# 定义IQR过滤函数
+def filter_outliers_iqr(df, value_col, group_col):
+    Q1 = df.groupby(group_col)[value_col].transform(lambda x: x.quantile(0.25))
+    Q3 = df.groupby(group_col)[value_col].transform(lambda x: x.quantile(0.75))
+    IQR = Q3 - Q1
+    return df[(df[value_col] >= Q1 - 1.5 * IQR) & (df[value_col] <= Q3 + 1.5 * IQR)]
 
-# 可视化预测结果
-plt.figure(figsize=(10, 6))
-plt.plot(temp_data.index, temp_data['平均温'], label='实际观测平均温度')
-forecast_dates = pd.date_range(temp_data.index[-1] + pd.Timedelta(days=1), periods=10)
-plt.plot(forecast_dates, forecast_mean, label='预测平均温度 (ARIMA)', linestyle='--', color='red')
-plt.fill_between(forecast_dates, forecast_conf_int.iloc[:, 0], forecast_conf_int.iloc[:, 1], color='red', alpha=0.3)
-plt.title(f'基于 ARIMA{auto_model.order} 模型的平均温度预测', fontsize=12)
-plt.xlabel('日期', fontsize=12)
-plt.ylabel('温度 (°C)', fontsize=12)
-plt.legend()
+# 应用IQR过滤
+data_filtered = filter_outliers_iqr(data_cleaned, 'AverageTemperature', 'Month')
+data_filtered = data_filtered[['AverageTemperature']]  # 保留必要的列
+# 绘制每日温度图，空缺值不显示
+plt.figure(figsize=(12, 6))
+plt.plot(data_filtered['AverageTemperature'], marker='.', linestyle='-', markersize=2, alpha=0.7)
+plt.title('每日平均气温（清洗后）')
+plt.xlabel('日期')
+plt.ylabel('气温 (°C)')
+plt.grid(True)
 plt.show()
+data_interpolated = data_filtered.interpolate(method='linear')
