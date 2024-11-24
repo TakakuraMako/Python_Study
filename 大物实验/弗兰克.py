@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 plt.rcParams['font.sans-serif']=['SimSun'] #宋体
 plt.rcParams['axes.unicode_minus'] = False 
-x = list(range(1, 83, 1))
+x = list(range(0, 82, 1))
 y = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
      0.04, 0.14, 0.36, 0.86, 1.78, 2.43, 2.43, 2.93, 3.55, 4.04,
      4.39, 4.59, 4.48, 4.04, 3.66, 4.31, 7.47, 10.32, 11.91, 13.09,
