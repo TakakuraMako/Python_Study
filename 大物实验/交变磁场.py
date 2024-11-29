@@ -34,13 +34,14 @@ def table_2():
     print(f'B_m:{B_m}')
     print(f'B_lilun:{B_lilun}')
     plt.figure()
-    plt.plot(x_1, B_m, marker = 'o')
-    plt.plot(x_1, B_lilun, marker = '*')
+    plt.plot(x_1, B_m, marker = 'o', label = r"$B_m$")
+    plt.plot(x_1, B_lilun, marker = '*', label = r"$B_{theory}$")
     plt.xticks(np.arange(-10, 11, 2))
     plt.xlabel('轴向距离' + r'$ x/cm $')
     plt.ylabel(r'$ B / mT $')
     plt.title('圆电流线圈轴上磁场分布的数据')
     plt.grid()
+    plt.legend()
     plt.show()
 
 
@@ -115,4 +116,4 @@ def table_6():
     plt.legend()
     plt.show()
     
-table_6()
+table_2()

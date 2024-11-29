@@ -106,7 +106,7 @@ def Nihe(t_n2, m):
     plt.xlim(0, max(t_n2) + 0.01)
     plt.ylim(0, max(m_pred) + 0.005)
     plt.grid()
-    plt.title(r'无铝盘时$m$与$1/t^2$的关系')
+    plt.title(r'$m$与$1/t^2$的关系')
     plt.xlabel(r'$1/t^2$')
     plt.ylabel(r'$m$')
     plt.show()
@@ -118,14 +118,17 @@ def Method2():
 
     # 带盘和不带盘时间
     t_withAl = np.array([7.2255, 6.1769, 5.4640, 4.9766, 4.6008, 4.2536, 4.0372, 3.8450])
-    t_withoutAl = np.array([4.5936, 3.9928, 3.5346, 3.2277, 2.9865, 2.7947, 6418, 2.4816])
+    t_withoutAl = np.array([4.5936, 3.9928, 3.5346, 3.2277, 2.9865, 2.7947, 2.6418, 2.4816])
 
     # 时间倒数平方
     t_withAl_n2 = np.array([round(1 / (x**2), 4) for x in t_withAl])
     t_withoutAl_n2 = np.array([round(1 / (x**2), 4) for x in t_withoutAl])
+    
     print("带铝盘")
+    print(t_withAl_n2)
     J = Nihe(t_withAl_n2, m)
     print(f"\n不带铝盘")
+    print(t_withoutAl_n2)
     J_0 = Nihe(t_withoutAl_n2, m)
     J_x = J - J_0
     # 理论值
