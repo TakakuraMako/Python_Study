@@ -1,0 +1,2472 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans" class="ua-mac ua-webkit book-new-nav">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>
+  豆瓣图书标签: 文学
+</title>
+  
+<script>!function(e){var o=function(o,n,t){var c,i,r=new Date;n=n||30,t=t||"/",r.setTime(r.getTime()+24*n*60*60*1e3),c="; expires="+r.toGMTString();for(i in o)e.cookie=i+"="+o[i]+c+"; path="+t},n=function(o){var n,t,c,i=o+"=",r=e.cookie.split(";");for(t=0,c=r.length;t<c;t++)if(n=r[t].replace(/^\s+|\s+$/g,""),0==n.indexOf(i))return n.substring(i.length,n.length).replace(/\"/g,"");return null},t=e.write,c={"douban.com":1,"douban.fm":1,"google.com":1,"google.cn":1,"googleapis.com":1,"gmaptiles.co.kr":1,"gstatic.com":1,"gstatic.cn":1,"google-analytics.com":1,"googleadservices.com":1},i=function(e,o){var n=new Image;n.onload=function(){},n.src="https://www.douban.com/j/except_report?kind=ra022&reason="+encodeURIComponent(e)+"&environment="+encodeURIComponent(o)},r=function(o){try{t.call(e,o)}catch(e){t(o)}},a=/<script.*?src\=["']?([^"'\s>]+)/gi,g=/http:\/\/(.+?)\.([^\/]+).+/i;e.writeln=e.write=function(e){var t,l=a.exec(e);return l&&(t=g.exec(l[1]))?c[t[2]]?void r(e):void("tqs"!==n("hj")&&(i(l[1],location.href),o({hj:"tqs"},1),setTimeout(function(){location.replace(location.href)},50))):void r(e)}}(document);</script>
+
+  
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="Sun, 6 Mar 2005 01:00:00 GMT">
+  <meta name="referrer" content="always">
+  <meta name="renderer" content="webkit">
+  
+  <script>var _head_start = new Date();</script>
+  
+  <link href="https://img1.doubanio.com/f/vendors/e92483e5e4c9c60cc75cbd8b700a2fd5b5fdf7b0/css/douban.css" rel="stylesheet" type="text/css">
+  <link href="https://img9.doubanio.com/cuphead/book-static/common/master.8dbb6.css" rel="stylesheet" type="text/css">
+
+  <link href="https://img3.doubanio.com/cuphead/book-static/base/init.e399f.css" rel="stylesheet">
+  <style type="text/css"></style>
+  <script src="https://img1.doubanio.com/f/vendors/0511abe9863c2ea7084efa7e24d1d86c5b3974f1/js/jquery-1.10.2.min.js"></script>
+  <script src="https://img1.doubanio.com/f/vendors/bdcc3c1ecb6de06ac99661953f4731c39e72af7f/js/douban.js"></script>
+  <script src="https://img3.doubanio.com/cuphead/book-static/common/master.f9c67.js"></script>
+  
+
+  
+  <script>  </script>
+  <style type="text/css">
+    .ebook-link a:link,
+    .ebook-link a:visited {
+      color: #973f31;
+    }
+    .ebook-link a:hover {
+      color: #fff;
+      background: #973f31;
+    }
+  </style>
+
+  <link rel="shortcut icon" href="https://img1.doubanio.com/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  
+    <script>var _body_start = new Date();</script>
+    
+  
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/05136e0/shire/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+<div id="db-global-nav" class="global-nav">
+  <div class="bd">
+    
+<div class="top-nav-info">
+  <a href="https://accounts.douban.com/passport/login?source=book" class="nav-login" rel="nofollow">登录/注册</a>
+</div>
+
+
+    <div class="top-nav-doubanapp">
+  <a href="https://www.douban.com/doubanapp/app?channel=top-nav" class="lnk-doubanapp">下载豆瓣客户端</a>
+  <div id="doubanapp-tip">
+    <a href="https://www.douban.com/doubanapp/app?channel=qipao" class="tip-link">豆瓣 <span class="version">6.0</span> 全新发布</a>
+    <a href="javascript: void 0;" class="tip-close">×</a>
+  </div>
+  <div id="top-nav-appintro" class="more-items">
+    <p class="appintro-title">豆瓣</p>
+    <p class="qrcode">扫码直接下载</p>
+    <div class="download">
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=iOS">iPhone</a>
+      <span>·</span>
+      <a href="https://www.douban.com/doubanapp/redirect?channel=top-nav&direct_dl=1&download=Android" class="download-android">Android</a>
+    </div>
+  </div>
+</div>
+
+    
+
+
+<div class="global-nav-items">
+  <ul>
+    <li class="">
+      <a href="https://www.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-main&quot;,&quot;uid&quot;:&quot;0&quot;}">豆瓣</a>
+    </li>
+    <li class="on">
+      <a href="https://book.douban.com"  data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-book&quot;,&quot;uid&quot;:&quot;0&quot;}">读书</a>
+    </li>
+    <li class="">
+      <a href="https://movie.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-movie&quot;,&quot;uid&quot;:&quot;0&quot;}">电影</a>
+    </li>
+    <li class="">
+      <a href="https://music.douban.com" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-music&quot;,&quot;uid&quot;:&quot;0&quot;}">音乐</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/location" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-location&quot;,&quot;uid&quot;:&quot;0&quot;}">同城</a>
+    </li>
+    <li class="">
+      <a href="https://www.douban.com/group" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-group&quot;,&quot;uid&quot;:&quot;0&quot;}">小组</a>
+    </li>
+    <li class="">
+      <a href="https://read.douban.com&#47;?dcs=top-nav&amp;dcm=douban" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-read&quot;,&quot;uid&quot;:&quot;0&quot;}">阅读</a>
+    </li>
+    <li class="">
+      <a href="https://fm.douban.com&#47;?from_=shire_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-fm&quot;,&quot;uid&quot;:&quot;0&quot;}">FM</a>
+    </li>
+    <li class="">
+      <a href="https://time.douban.com&#47;?dt_time_source=douban-web_top_nav" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-time&quot;,&quot;uid&quot;:&quot;0&quot;}">时间</a>
+    </li>
+    <li class="">
+      <a href="https://market.douban.com&#47;?utm_campaign=douban_top_nav&amp;utm_source=douban&amp;utm_medium=pc_web" target="_blank" data-moreurl-dict="{&quot;from&quot;:&quot;top-nav-click-market&quot;,&quot;uid&quot;:&quot;0&quot;}">豆品</a>
+    </li>
+  </ul>
+</div>
+
+  </div>
+</div>
+<script>
+  ;window._GLOBAL_NAV = {
+    DOUBAN_URL: "https://www.douban.com",
+    N_NEW_NOTIS: 0,
+    N_NEW_DOUMAIL: 0
+  };
+</script>
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/05136e0/shire/bundle.js" defer="defer"></script>
+
+
+
+
+  
+
+
+
+    <link href="//img3.doubanio.com/dae/accounts/resources/05136e0/book/bundle.css" rel="stylesheet" type="text/css">
+
+
+
+
+<div id="db-nav-book" class="nav">
+  <div class="nav-wrap">
+  <div class="nav-primary">
+    <div class="nav-logo">
+      <a href="https:&#47;&#47;book.douban.com">豆瓣读书</a>
+    </div>
+    <div class="nav-search">
+      <form action="https:&#47;&#47;search.douban.com&#47;book/subject_search" method="get">
+        <fieldset>
+          <legend>搜索：</legend>
+          <label for="inp-query">
+          </label>
+          <div class="inp"><input id="inp-query" name="search_text" size="22" maxlength="60" placeholder="书名、作者、ISBN" value=""></div>
+          <div class="inp-btn"><input type="submit" value="搜索"></div>
+          <input type="hidden" name="cat" value="1001" />
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  </div>
+  <div class="nav-secondary">
+    
+
+<div class="nav-items">
+  <ul>
+    <li    ><a href="https://book.douban.com/cart/"
+     >购书单</a>
+    </li>
+    <li    ><a href="https://read.douban.com/ebooks/?dcs=book-nav&dcm=douban"
+            target="_blank"
+     >电子图书</a>
+    </li>
+    <li    ><a href="https://book.douban.com/annual/2024/?fullscreen=1&dt_from=navigation"
+            target="_blank"
+     >2024年度榜单</a>
+    </li>
+    <li    ><a href="https://c9.douban.com/app/standbyme-2023/?autorotate=false&fullscreen=true&hidenav=true&monitor_screenshot=true&source=web_navigation"
+            target="_blank"
+     >2023年度报告</a>
+    </li>
+  </ul>
+</div>
+
+    <a href="https://book.douban.com/annual/2024/?fullscreen=1&&dt_from=book_navigation" class="bookannual"></a>
+  </div>
+</div>
+
+<script id="suggResult" type="text/x-jquery-tmpl">
+  <li data-link="{{= url}}">
+            <a href="{{= url}}" onclick="moreurl(this, {from:'book_search_sugg', query:'{{= keyword }}', subject_id:'{{= id}}', i: '{{= index}}', type: '{{= type}}'})">
+            <img src="{{= pic}}" width="40" />
+            <div>
+                <em>{{= title}}</em>
+                {{if year}}
+                    <span>{{= year}}</span>
+                {{/if}}
+                <p>
+                {{if type == "b"}}
+                    {{= author_name}}
+                {{else type == "a" }}
+                    {{if en_name}}
+                        {{= en_name}}
+                    {{/if}}
+                {{/if}}
+                 </p>
+            </div>
+        </a>
+        </li>
+  </script>
+
+
+
+
+    <script src="//img3.doubanio.com/dae/accounts/resources/05136e0/book/bundle.js" defer="defer"></script>
+
+
+
+
+
+    <div id="wrapper">
+        
+        
+  <div id="content">
+    
+    <h1>豆瓣图书标签: 文学</h1>
+
+    <div class="grid-16-8 clearfix">
+      
+      <div class="article">
+  <div id="subject_list">
+
+      
+  
+  
+  <div class="clearfix">
+    <span class="rr greyinput">
+
+          <a href="/tag/%E6%96%87%E5%AD%A6?type=">综合排序</a>
+          &nbsp;/&nbsp;
+
+          <a href="/tag/%E6%96%87%E5%AD%A6?type=R">按出版日期排序</a>
+          &nbsp;/&nbsp;
+
+          按评价排序
+    </span>
+  </div>
+
+
+
+    
+  
+  <link rel="stylesheet" href="https://img3.doubanio.com/cuphead/book-static/common/subject_list.51da7.css">
+  <ul class="subject-list">
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/25858598/" 
+  onclick="moreurl(this,{i:'0',query:'',subject_id:'25858598',from:'book_subject_search'})">
+        <img class="" src="https://img1.doubanio.com/view/subject/s/public/s27258909.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/25858598/" title="嵇康集校注" 
+  onclick="moreurl(this,{i:'0',query:'',subject_id:'25858598',from:'book_subject_search'})">
+
+    嵇康集校注
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  [三国魏]嵇康  著、戴明扬  校注 / 中华书局 / 2014-3 / 76.00元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (227人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>戴明扬撰著的《嵇康集校注》，详校《嵇康集》众本，厘定文字，择录旧注，征引典故，广辑嵇康事迹及其人其作之评论，对研究嵇康生平及其作品具有重要的参考价值，几十年... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+    <span class="buy-info">
+      <a href="https://book.douban.com/subject/25858598/buylinks">
+        纸质版 56.70元
+      </a>
+    </span>
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/26680378/" 
+  onclick="moreurl(this,{i:'1',query:'',subject_id:'26680378',from:'book_subject_search'})">
+        <img class="" src="https://img9.doubanio.com/view/subject/s/public/s33522285.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/26680378/" title="脂砚斋批评本·红楼梦" 
+  onclick="moreurl(this,{i:'1',query:'',subject_id:'26680378',from:'book_subject_search'})">
+
+    脂砚斋批评本·红楼梦
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  [清] 曹雪芹 著、脂砚斋 评点 / 王丽文 校点 / 岳麓书社 / 2015-9 / 78.00元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (1067人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>古典名著在中国文学史上地位的确立，首先当然是这些名著本身所具有的独特魅力所致，但是也与这些小说刊刻之后，一大批眼光独到的小说批评家们极力批点评说有极大的关系... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+    <span class="buy-info">
+      <a href="https://book.douban.com/subject/26680378/buylinks">
+        纸质版 62.40元
+      </a>
+    </span>
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/30400600/" 
+  onclick="moreurl(this,{i:'2',query:'',subject_id:'30400600',from:'book_subject_search'})">
+        <img class="" src="https://img9.doubanio.com/view/subject/s/public/s29945595.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/30400600/" title="时有微凉" 
+  onclick="moreurl(this,{i:'2',query:'',subject_id:'30400600',from:'book_subject_search'})">
+
+    时有微凉
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  吕瞻呈 / 江苏凤凰文艺出版社 / 2019-1-1 / 38.00
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (116人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>嘘。闭上你的嘴，你的眼。请以你的沉默和盲，成就我。
+重压之下，是选择坠入深渊，还是奔向那一缕射进黑暗中的阳光？都市女性成长必读，灵与肉的艰难抉择，尽在《时有... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+    <span class="buy-info">
+      <a href="https://book.douban.com/subject/30400600/buylinks">
+        纸质版 19.00元
+      </a>
+    </span>
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/5967909/" 
+  onclick="moreurl(this,{i:'3',query:'',subject_id:'5967909',from:'book_subject_search'})">
+        <img class="" src="https://img1.doubanio.com/view/subject/s/public/s7046490.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/5967909/" title="战争与和平（第三卷）" 
+  onclick="moreurl(this,{i:'3',query:'',subject_id:'5967909',from:'book_subject_search'})">
+
+    战争与和平（第三卷）
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  [俄] 列夫·托尔斯泰 / 高植 / 上海译文出版社 / 1981-9 / 1.50元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (156人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/37001008/" 
+  onclick="moreurl(this,{i:'4',query:'',subject_id:'37001008',from:'book_subject_search'})">
+        <img class="" src="https://img9.doubanio.com/view/subject/s/public/s34944024.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/37001008/" title="长安诗酒汴京花" 
+  onclick="moreurl(this,{i:'4',query:'',subject_id:'37001008',from:'book_subject_search'})">
+
+    长安诗酒汴京花
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  随园散人 / 湖南文艺出版社 / 2024-8 / 79.80元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (169人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>从《当仓央嘉措遇见纳兰容若》到《长安诗酒汴京花》，古风散文旋风劲吹12年，「随园散人」祭出人生终章。
+·
+《长安诗酒汴京花》是知名作家随园散人生前创作的唐宋... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+    <span class="buy-info">
+      <a href="https://book.douban.com/subject/37001008/buylinks">
+        纸质版 43.89元
+      </a>
+    </span>
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/5247161/" 
+  onclick="moreurl(this,{i:'5',query:'',subject_id:'5247161',from:'book_subject_search'})">
+        <img class="" src="https://img9.doubanio.com/view/subject/s/public/s7632954.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/5247161/" title="费·陀思妥耶夫斯基全集（全22卷）" 
+  onclick="moreurl(this,{i:'5',query:'',subject_id:'5247161',from:'book_subject_search'})">
+
+    费·陀思妥耶夫斯基全集（全22卷）
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  陈燊 主编 / 河北教育出版社 / 2010-1 / 2000.00元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (274人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>河北教育出版社2010年1月出版，陈燊主编。全集为22卷精装版，定价2000元。是目前国内收录最全，注解最详，容量最大的陀思妥耶夫斯基作品集。
+费•陀思妥耶... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/30137806/" 
+  onclick="moreurl(this,{i:'6',query:'',subject_id:'30137806',from:'book_subject_search'})">
+        <img class="" src="https://img9.doubanio.com/view/subject/s/public/s29683585.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/30137806/" title="红楼梦" 
+  onclick="moreurl(this,{i:'6',query:'',subject_id:'30137806',from:'book_subject_search'})">
+
+    红楼梦
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  曹雪芹、无名氏 续 / 人民文学出版社 / 2018-1 / CNY 260.00
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (12684人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>《红楼梦》，中国古代古代四大名著之一，也是中国古代小说的巅峰之作。全书以荣国府的日常生活为中心，以宝玉、黛玉、宝钗的爱情婚姻悲剧及大观园中点滴琐事为主线，以... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+    <span class="buy-info">
+      <a href="https://book.douban.com/subject/30137806/buylinks">
+        纸质版 143.00元
+      </a>
+    </span>
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/1545948/" 
+  onclick="moreurl(this,{i:'7',query:'',subject_id:'1545948',from:'book_subject_search'})">
+        <img class="" src="https://img9.doubanio.com/view/subject/s/public/s23692785.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/1545948/" title="李白集校注(全二册)" 
+  onclick="moreurl(this,{i:'7',query:'',subject_id:'1545948',from:'book_subject_search'})">
+
+    李白集校注(全二册)
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  李白、瞿蜕园校注、朱金城校注 / 上海古籍出版社 / 2011-8 / 158.00元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (111人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>《李白集校注》以清乾隆刊本王琦辑注《李太白文集》为底本，并校以北京图书馆藏北宋本《李太白文集》、日本京都大学影印宋刊《李太白文集》等十余种重要刊本和唐宋重要... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/10511580/" 
+  onclick="moreurl(this,{i:'8',query:'',subject_id:'10511580',from:'book_subject_search'})">
+        <img class="" src="https://img9.doubanio.com/view/subject/s/public/s8514015.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/10511580/" title="红楼梦" 
+  onclick="moreurl(this,{i:'8',query:'',subject_id:'10511580',from:'book_subject_search'})">
+
+    红楼梦
+
+
+    
+      <span style="font-size:12px;"> : 红楼梦 </span>
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  【清】曹雪芹、高鹗等 / 作家出版社 / 2006 / 32.80元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (486人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>《红楼梦》是一部百科全书式的长篇小说。以宝黛爱情悲剧为主线，以四大家族的荣辱兴衰为背景，描绘出18世纪中国封建社会的方方面面，以及封建专制下新兴资本主义民主... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/30690454/" 
+  onclick="moreurl(this,{i:'9',query:'',subject_id:'30690454',from:'book_subject_search'})">
+        <img class="" src="https://img3.doubanio.com/view/subject/s/public/s33321663.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/30690454/" title="唐诗三百首详注" 
+  onclick="moreurl(this,{i:'9',query:'',subject_id:'30690454',from:'book_subject_search'})">
+
+    唐诗三百首详注
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  陶今雁 / 百花洲文艺出版社 / 2017 / 33.00元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (183人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+    <span class="buy-info">
+      <a href="https://book.douban.com/subject/30690454/buylinks">
+        纸质版 16.20元
+      </a>
+    </span>
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/4747426/" 
+  onclick="moreurl(this,{i:'10',query:'',subject_id:'4747426',from:'book_subject_search'})">
+        <img class="" src="https://img1.doubanio.com/view/subject/s/public/s6309298.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/4747426/" title="脂砚斋重评石头记庚辰校本（全四册）" 
+  onclick="moreurl(this,{i:'10',query:'',subject_id:'4747426',from:'book_subject_search'})">
+
+    脂砚斋重评石头记庚辰校本（全四册）
+
+
+    
+      <span style="font-size:12px;"> : 修订四版 </span>
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  （清）曹雪芹　著、（清）脂砚斋、邓遂夫（校订） / 作家出版社 / 2010-5 / 128.00元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (204人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>《脂砚斋重评石头记庚辰校本(修订4版)(套装共4册)》是国内外首次出版的一部全面反映《红楼梦》庚辰本包括其指批原貌的校订本。《脂砚斋重评石头记庚辰校本(修订... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/35052142/" 
+  onclick="moreurl(this,{i:'11',query:'',subject_id:'35052142',from:'book_subject_search'})">
+        <img class="" src="https://img1.doubanio.com/view/subject/s/public/s33727360.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/35052142/" title="莎士比亚悲剧五种" 
+  onclick="moreurl(this,{i:'11',query:'',subject_id:'35052142',from:'book_subject_search'})">
+
+    莎士比亚悲剧五种
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  [英] 威廉·莎士比亚 / 朱生豪 / 人民文学出版社 / 2020-6 / 69.00元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (277人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>莎士比亚一生写的戏剧包括历史剧、喜剧和悲剧，分别属于他的三个各有侧重的创作时期；其中晚期所写的悲剧，集中了他的人生智慧，反映了可纳入善与恶两大伦理范畴的各种... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+    <span class="buy-info">
+      <a href="https://book.douban.com/subject/35052142/buylinks">
+        纸质版 40.02元
+      </a>
+    </span>
+
+          </div>
+
+            
+            
+  
+    
+    
+  <div class="ebook-link">
+    <a target="_blank" href="https://read.douban.com/ebook/321441111/?dcs=tag-buylink&amp;dcm=douban&amp;dct=35052142">去看电子版</a>
+  </div>
+  
+
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/1002055/" 
+  onclick="moreurl(this,{i:'12',query:'',subject_id:'1002055',from:'book_subject_search'})">
+        <img class="" src="https://img9.doubanio.com/view/subject/s/public/s1001285.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/1002055/" title="鲁迅全集(2)" 
+  onclick="moreurl(this,{i:'12',query:'',subject_id:'1002055',from:'book_subject_search'})">
+
+    鲁迅全集(2)
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  鲁迅 / 人民文学出版社 / 1981-12 / 31.75
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (480人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/26351750/" 
+  onclick="moreurl(this,{i:'13',query:'',subject_id:'26351750',from:'book_subject_search'})">
+        <img class="" src="https://img1.doubanio.com/view/subject/s/public/s28034030.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/26351750/" title="王小波全集" 
+  onclick="moreurl(this,{i:'13',query:'',subject_id:'26351750',from:'book_subject_search'})">
+
+    王小波全集
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  王小波 / 北京联合出版公司 / 2014-5-1 / 311.00元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.7</span>
+
+    <span class="pl">
+        (379人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>《王小波全集第一卷》
+长篇小说万寿寺。作者通过一个失忆的主人公对当下生活和薛嵩故事的不断切换，讲述关于自我、记忆、现在、过去、身份、这里、别处的故事。在现实... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+    <span class="buy-info">
+      <a href="https://book.douban.com/subject/26351750/buylinks">
+        纸质版 579.00元
+      </a>
+    </span>
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/36405188/" 
+  onclick="moreurl(this,{i:'14',query:'',subject_id:'36405188',from:'book_subject_search'})">
+        <img class="" src="https://img3.doubanio.com/view/subject/s/public/s34588583.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/36405188/" title="川端康成经典名作集" 
+  onclick="moreurl(this,{i:'14',query:'',subject_id:'36405188',from:'book_subject_search'})">
+
+    川端康成经典名作集
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  [日]川端康成 / 竺祖慈、叶宗敏 / 四川人民出版社 / 2023-6 / 168.00元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (138人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>后浪插图经典，名家名译名画
+收录传世插画，精心打磨译本
+集结川端康成五部抒情名作
+翻译家竺祖慈、叶宗敏专业译本 再现原著风韵
+搭配版画大师吉田博、川濑巴水画... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+    <span class="buy-info">
+      <a href="https://book.douban.com/subject/36405188/buylinks">
+        纸质版 84.00元
+      </a>
+    </span>
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/1738709/" 
+  onclick="moreurl(this,{i:'15',query:'',subject_id:'1738709',from:'book_subject_search'})">
+        <img class="" src="https://img9.doubanio.com/view/subject/s/public/s10272815.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/1738709/" title="红楼梦（上、中、下）" 
+  onclick="moreurl(this,{i:'15',query:'',subject_id:'1738709',from:'book_subject_search'})">
+
+    红楼梦（上、中、下）
+
+
+    
+      <span style="font-size:12px;"> : （增补绣像典藏全本，上中下册） </span>
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  (清)曹雪芹、(清)高鹗著 / 新世界出版社 / 2006-1 / 65.00元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (125人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>在我国，《红楼梦》、《三国演义》、《水浒传》、《西游记》被广大读者称为“四大名著”，几可谓家喻户晓，妇孺皆知。而在中国文学史上，没有哪部书的抄本如《红楼梦》... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/1845848/" 
+  onclick="moreurl(this,{i:'16',query:'',subject_id:'1845848',from:'book_subject_search'})">
+        <img class="" src="https://img2.doubanio.com/view/subject/s/public/s2651401.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/1845848/" title="现代英文选评注" 
+  onclick="moreurl(this,{i:'16',query:'',subject_id:'1845848',from:'book_subject_search'})">
+
+    现代英文选评注
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  夏济安 评注 / 上海译文出版社 / 1985年8月第一版 / 1.90元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (119人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/34894615/" 
+  onclick="moreurl(this,{i:'17',query:'',subject_id:'34894615',from:'book_subject_search'})">
+        <img class="" src="https://img1.doubanio.com/view/subject/s/public/s34392518.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/34894615/" title="契诃夫小说选" 
+  onclick="moreurl(this,{i:'17',query:'',subject_id:'34894615',from:'book_subject_search'})">
+
+    契诃夫小说选
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  [俄] 契诃夫 / 汝龙 / 人民文学出版社 / 2020-4 / 65.00元
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (270人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>《契诃夫小说选》收入契诃夫脍炙人口的短篇佳作，如《变色龙》《套中人》《一个文官的死》等等，集中体现了作者的艺术风格。契诃夫的小说紧凑精炼，言简意赅，给读者以... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+    <span class="buy-info">
+      <a href="https://book.douban.com/subject/34894615/buylinks">
+        纸质版 37.70元
+      </a>
+    </span>
+
+          </div>
+
+            
+            
+  
+    
+    
+  <div class="ebook-link">
+    <a target="_blank" href="https://read.douban.com/ebook/161014930/?dcs=tag-buylink&amp;dcm=douban&amp;dct=34894615">去看电子版</a>
+  </div>
+  
+
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/1084720/" 
+  onclick="moreurl(this,{i:'18',query:'',subject_id:'1084720',from:'book_subject_search'})">
+        <img class="" src="https://img1.doubanio.com/view/subject/s/public/s5688438.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/1084720/" title="傅雷全集" 
+  onclick="moreurl(this,{i:'18',query:'',subject_id:'1084720',from:'book_subject_search'})">
+
+    傅雷全集
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  傅雷 / 辽宁教育出版社 / 2002-12 / 1200.00
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (114人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+    <p>全书共20册，收录傅雷先生解放前和解放后的有关小说、传记、艺术、政论等译作三十六部，译文二十五篇；还有涉及文学、美术、音乐等文章一百三十六篇，以及家书一百七... </p>
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+      
+      
+  
+  <li class="subject-item">
+    <div class="pic">
+      <a class="nbg" href="https://book.douban.com/subject/25867851/" 
+  onclick="moreurl(this,{i:'19',query:'',subject_id:'25867851',from:'book_subject_search'})">
+        <img class="" src="https://img1.doubanio.com/view/subject/s/public/s27261258.jpg"
+          width="90">
+      </a>
+    </div>
+    <div class="info">
+      <h2 class="">
+        
+  
+  <a href="https://book.douban.com/subject/25867851/" title="路遥全集" 
+  onclick="moreurl(this,{i:'19',query:'',subject_id:'25867851',from:'book_subject_search'})">
+
+    路遥全集
+
+
+    
+
+  </a>
+
+      </h2>
+      <div class="pub">
+        
+  
+  路遥 / 北京十月文艺出版社 / 2013-5-1 / CNY 220.00
+
+      </div>
+
+
+        
+  
+  
+  
+  <div class="star clearfix">
+        <span class="allstar50"></span>
+        <span class="rating_nums">9.8</span>
+
+    <span class="pl">
+        (106人评价)
+    </span>
+  </div>
+
+
+
+        
+  
+  
+  
+
+
+
+
+
+
+      <div class="ft">
+          
+  <div class="collect-info">
+  </div>
+
+
+          <div class="cart-actions">
+            
+                
+  
+
+    <span class="buy-info">
+      <a href="https://book.douban.com/subject/25867851/buylinks">
+        纸质版 240.80元
+      </a>
+    </span>
+
+          </div>
+
+            
+            
+  
+
+      </div>
+
+    </div>
+  </li>
+
+  </ul>
+
+
+      
+    
+    
+    
+        <div class="paginator">
+        <span class="prev">
+            <link rel="prev" href="/tag/文学?start=0&amp;type=S"/>
+            <a href="/tag/文学?start=0&amp;type=S" >&lt;前页</a>
+        </span>
+        
+        
+
+                
+            <a href="/tag/文学?start=0&amp;type=S" >1</a>
+        
+                <span class="thispage">2</span>
+                
+            <a href="/tag/文学?start=40&amp;type=S" >3</a>
+        
+                
+            <a href="/tag/文学?start=60&amp;type=S" >4</a>
+        
+                
+            <a href="/tag/文学?start=80&amp;type=S" >5</a>
+        
+                
+            <a href="/tag/文学?start=100&amp;type=S" >6</a>
+        
+                
+            <a href="/tag/文学?start=120&amp;type=S" >7</a>
+        
+                
+            <a href="/tag/文学?start=140&amp;type=S" >8</a>
+        
+                
+            <a href="/tag/文学?start=160&amp;type=S" >9</a>
+        
+            <span class="break">...</span>
+                
+            <a href="/tag/文学?start=960&amp;type=S" >49</a>
+        
+            <a href="/tag/文学?start=980&amp;type=S" >50</a>
+        
+        <span class="next">
+            <link rel="next" href="/tag/文学?start=40&amp;type=S"/>
+            <a href="/tag/文学?start=40&amp;type=S" >后页&gt;</a>
+        </span>
+
+        </div>
+
+
+  </div>
+</div>
+      <div class="aside">
+        
+  <br/>
+  <div id="dale_book_tag_top_right"></div>
+
+    
+  
+
+  <h2>
+    <span>相关的标签</span>
+      &nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;&nbsp;&middot;
+
+  </h2>
+
+
+    
+  <div class="tags-list">
+      <a href="/tag/小说">小说</a>
+      <a href="/tag/古典文学">古典文学</a>
+      <a href="/tag/外国文学">外国文学</a>
+      <a href="/tag/中国文学">中国文学</a>
+      <a href="/tag/诗歌">诗歌</a>
+      <a href="/tag/中国">中国</a>
+      <a href="/tag/纸版">纸版</a>
+      <a href="/tag/散文">散文</a>
+  </div>
+
+
+  
+  <form name="tsp_form" action="/tag/" method="GET">
+    <input name="search_text" class="j a_search_text" type="text" size="24" maxlength="36" title="去其他标签" value=""/>
+    <input class="butt" type="submit" value="进入"/>
+  </form>
+  <br/>
+  <br/>
+
+
+  <p class="pl2 mb30">
+    &gt; <a href="/tag/">浏览全部图书标签</a>
+  </p>
+
+
+    <br/>
+    <br/>
+    
+<div class="block5 movie_show">
+    <h2>最近受关注的书-文学</h2>
+    <div class="content clearfix" id="book_rec">
+            <dl>
+                <dt><a onclick="moreurl(this, {'r1001':'book-tag-top'})" 
+                href="https://book.douban.com/subject/37155515/"><img src="https://img3.doubanio.com/view/subject/s/public/s35032627.jpg" 
+                class="m_sub_img" /></a></dt>
+                <dd><a onclick="moreurl(this, {'r1001':'book-tag-top'})"
+                href="https://book.douban.com/subject/37155515/">罪恶天桥</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a onclick="moreurl(this, {'r1001':'book-tag-top'})" 
+                href="https://book.douban.com/subject/36721763/"><img src="https://img3.doubanio.com/view/subject/s/public/s34782512.jpg" 
+                class="m_sub_img" /></a></dt>
+                <dd><a onclick="moreurl(this, {'r1001':'book-tag-top'})"
+                href="https://book.douban.com/subject/36721763/">暗处的女儿</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a onclick="moreurl(this, {'r1001':'book-tag-top'})" 
+                href="https://book.douban.com/subject/36978314/"><img src="https://img3.doubanio.com/view/subject/s/public/s35020417.jpg" 
+                class="m_sub_img" /></a></dt>
+                <dd><a onclick="moreurl(this, {'r1001':'book-tag-top'})"
+                href="https://book.douban.com/subject/36978314/">不被大风吹倒</a>
+                </dd>
+            </dl>
+            <div class="clearfix rr" style="width:100%"></div>
+            <dl>
+                <dt><a onclick="moreurl(this, {'r1001':'book-tag-top'})" 
+                href="https://book.douban.com/subject/37125021/"><img src="https://img1.doubanio.com/view/subject/s/public/s35015638.jpg" 
+                class="m_sub_img" /></a></dt>
+                <dd><a onclick="moreurl(this, {'r1001':'book-tag-top'})"
+                href="https://book.douban.com/subject/37125021/">帝国之翼</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a onclick="moreurl(this, {'r1001':'book-tag-top'})" 
+                href="https://book.douban.com/subject/36956148/"><img src="https://img3.doubanio.com/view/subject/s/public/s34917303.jpg" 
+                class="m_sub_img" /></a></dt>
+                <dd><a onclick="moreurl(this, {'r1001':'book-tag-top'})"
+                href="https://book.douban.com/subject/36956148/">团圆记</a>
+                </dd>
+            </dl>
+            <dl>
+                <dt><a onclick="moreurl(this, {'r1001':'book-tag-top'})" 
+                href="https://book.douban.com/subject/37076175/"><img src="https://img9.doubanio.com/view/subject/s/public/s35002505.jpg" 
+                class="m_sub_img" /></a></dt>
+                <dd><a onclick="moreurl(this, {'r1001':'book-tag-top'})"
+                href="https://book.douban.com/subject/37076175/">看不见的中东</a>
+                </dd>
+            </dl>
+            <div class="clearfix rr" style="width:100%"></div>
+    </div>
+</div>
+
+
+
+  
+
+
+
+
+    
+<script type="text/javascript">
+    (function (global) {
+        var newNode = global.document.createElement('script'),
+            existingNode = global.document.getElementsByTagName('script')[0],
+            adSource = '//erebor.douban.com/',
+            userId = '',
+            browserId = 'YCuxz8rvjZo',
+            criteria = '3:/tag/文学?start=20&amp;type=S',
+            preview = '',
+            debug = false,
+            adSlots = ['dale_book_tag_top_right'];
+
+        global.DoubanAdRequest = {src: adSource, uid: userId, bid: browserId, crtr: criteria, prv: preview, debug: debug};
+        global.DoubanAdSlots = (global.DoubanAdSlots || []).concat(adSlots);
+
+        newNode.setAttribute('type', 'text/javascript');
+        newNode.setAttribute('src', '//img1.doubanio.com/bG90MDZqMy9mL2FkanMvYzhmZjE5MGNhYzNkN2UyMWJjMTI3NzJlYWNkOWVkODZhMmFjMzdhMi9hZC5yZWxlYXNlLmpz?company_token=kX69T8w1wyOE-dale');
+        newNode.setAttribute('async', true);
+        existingNode.parentNode.insertBefore(newNode, existingNode);
+    })(this);
+</script>
+
+
+
+
+
+
+
+
+      </div>
+      <div class="extra">
+        
+      </div>
+    </div>
+  </div>
+
+        
+  <div id="footer">
+    
+<span id="icp" class="fleft gray-link">
+    &copy; 2005－2024 douban.com, all rights reserved 北京豆网科技有限公司
+</span>
+
+<a href="https://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+<span class="fright">
+    <a href="https://www.douban.com/about">关于豆瓣</a>
+    · <a href="https://www.douban.com/jobs">在豆瓣工作</a>
+    · <a href="https://www.douban.com/about?topic=contactus">联系我们</a>
+    · <a href="https://www.douban.com/about/legal">法律声明</a>
+    
+    · <a href="https://help.douban.com/?app=book" target="_blank">帮助中心</a>
+    · <a href="https://book.douban.com/library_invitation">图书馆合作</a>
+    · <a href="https://www.douban.com/doubanapp/">移动应用</a>
+</span>
+
+  </div>
+
+    </div>
+      
+
+    <!-- COLLECTED JS -->
+    <!-- mako -->
+    
+  <script>
+    $(function () {
+      function update_tags(current) {
+        html = $.map(current, function(o) {return '<span class="tags-name">' + o + '</span><sup class="tags-del"></sup> '}).join('<span class="tags-add">+</span>');
+        $('h1').html('<span class="name">电影标签：</span>' + html);
+      };
+
+      function get_current_tags() {
+        var r = [];
+        $('.tags-name').each(function() {r.push($(this).text())});
+        return r;
+      };
+
+      function get_current_sort_type() {
+        url = location.href;
+        array = url.split("?")
+        if (array.length == 1) {
+          return "";
+        }
+        query = array[1];
+        arr = query.split("&");
+        for (var i = 0; i < arr.length; i++) {
+          arr2 = arr[i].split('=');
+          if (arr2[0] == "type") {
+            if (arr2.length == 1) {
+              return "";
+            }
+            return arr2[1];
+          }
+        }
+        return "";
+      };
+
+      function update_subject_list(current, sort_type) {
+        $('#subject_list').html('<span class="pl">载入中，请稍候...</span>');
+        $('#subject_list').load_withck('/j/tag/j_subject_list', {tags:current.join(' '), type:sort_type}, function() {});
+      };
+
+      function update_related_tags_and_subject(current, sort_type) {
+        update_related_tags(current, sort_type);
+        // update_subject_list(current, sort_type);
+      };
+
+      function update_related_tags(current, sort_type) {
+        $('#related_tags').load_withck('/j/tag/j_related_tag', {tags:current.join(' '), type:sort_type}, function() {
+          $('.more').toggle(
+            function () {
+              $('.tags-hide').css('display', 'inline');
+              $(this).text('收起▲');
+            },
+            function () {
+              $('.tags-hide').hide();
+              $(this).text('更多▼');
+            }
+          );
+          $('.tags-del').click(function () {
+            if($(this).prev().prev().text() == '+') {
+              $(this).prev().prev().remove();
+            } else if ($(this).next().text() == '+') {
+              $(this).next().remove();
+            }
+            $(this).prev().remove().end().remove();
+            current = get_current_tags();
+            if (current.length == 0){
+              document.location.href = '/tag/';
+            } else {
+              sort_type = get_current_sort_type();
+              location.href = '/tag/' + current.join(' ') + '?type=' + sort_type;
+            }
+          });
+          $('.add-tag').click(function () {
+            current = get_current_tags();
+            current.push($(this).text());
+            update_tags(current);
+            sort_type = get_current_sort_type();
+            location.href = '/tag/' + current.join(' ') + '?type=' + sort_type;
+          });
+          $('.tagsInput').keypress(function (e) {
+            if (e.which == 13) {
+              current = get_current_tags();
+              current.push($(this).val());
+              update_tags(current);
+              sort_type = get_current_sort_type();
+              location.href = '/tag/' + current.join(' ') + '?type=' + sort_type;
+            }
+          });
+          checkInput($('.tagsInput'));
+        });
+      };
+
+      current = get_current_tags();
+      sort_type = get_current_sort_type();
+      update_related_tags_and_subject(current, sort_type);
+
+      function checkInput (o) {
+        if (!o.val() || o.val() == o.attr('title')) {
+          o.addClass('greyinput');
+          o.val(o.attr('title'));
+        }
+        o.focus(function(){
+          o.removeClass('greyinput');
+          if(o.val() == o.attr('title')) o.val('');
+        });
+        o.blur(function(){
+          if(!o.val()){
+            o.addClass('greyinput');
+            o.val(o.attr('title'));
+          }
+        });
+      }
+
+  });
+  </script>
+
+    
+  
+
+<script type="text/javascript">
+  var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var p=(('https:' == document.location.protocol) ? 'https' : 'http'), u=p+'://fundin.douban.com/';
+    _paq.push(['setTrackerUrl', u+'piwik']);
+    _paq.push(['setSiteId', '100001']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; 
+    g.type='text/javascript';
+    g.defer=true; 
+    g.async=true; 
+    g.src=p+'://s.doubanio.com/dae/fundin/piwik.js';
+    s.parentNode.insertBefore(g,s);
+  })();
+</script>
+
+<script type="text/javascript">
+var setMethodWithNs = function(namespace) {
+  var ns = namespace ? namespace + '.' : ''
+    , fn = function(string) {
+        if(!ns) {return string}
+        return ns + string
+      }
+  return fn
+}
+
+var gaWithNamespace = function(fn, namespace) {
+  var method = setMethodWithNs(namespace)
+  fn.call(this, method)
+}
+
+var _gaq = _gaq || []
+  , accounts = [
+      { id: 'UA-7019765-1', namespace: 'douban' }
+    , { id: 'UA-7019765-16', namespace: '' }
+    ]
+  , gaInit = function(account) {
+      gaWithNamespace(function(method) {
+        gaInitFn.call(this, method, account)
+      }, account.namespace)
+    }
+  , gaInitFn = function(method, account) {
+      _gaq.push([method('_setAccount'), account.id])
+
+      
+  _gaq.push([method('_addOrganic'), 'google', 'q'])
+  _gaq.push([method('_addOrganic'), 'baidu', 'wd'])
+  _gaq.push([method('_addOrganic'), 'soso', 'w'])
+  _gaq.push([method('_addOrganic'), 'youdao', 'q'])
+  _gaq.push([method('_addOrganic'), 'so.360.cn', 'q'])
+  _gaq.push([method('_addOrganic'), 'sogou', 'query'])
+  if (account.namespace) {
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣'])
+    _gaq.push([method('_addIgnoredOrganic'), 'douban'])
+    _gaq.push([method('_addIgnoredOrganic'), '豆瓣网'])
+    _gaq.push([method('_addIgnoredOrganic'), 'www.douban.com'])
+  }
+
+      if (account.namespace === 'douban') {
+        _gaq.push([method('_setDomainName'), '.douban.com'])
+      }
+
+        _gaq.push([method('_setCustomVar'), 1, 'responsive_view_mode', 'desktop', 3])
+
+        _gaq.push([method('_setCustomVar'), 2, 'login_status', '0', 2]);
+
+      _gaq.push([method('_trackPageview')])
+    }
+
+for(var i = 0, l = accounts.length; i < l; i++) {
+  var account = accounts[i]
+  gaInit(account)
+}
+
+
+;(function() {
+    var ga = document.createElement('script');
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.setAttribute('async', 'true');
+    document.documentElement.firstChild.appendChild(ga);
+})()
+</script>
+
+
+
+
+
+
+
+
+    <!-- dae-web-book--default-6dfbbc9794-97c7k-->
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
