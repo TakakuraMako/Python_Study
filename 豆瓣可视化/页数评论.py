@@ -18,7 +18,7 @@ session = requests.Session()
 session.proxies.update(proxies)
 
 pattern = re.compile(r'<meta name="description" content=".*?短评。(?P<comment>.*?)"', re.S)
-for i in range(28, len(data)):
+for i in range(313, len(data)):
     url = data.iloc[i]['url'] + 'comments/'
 
     # 发起请求
