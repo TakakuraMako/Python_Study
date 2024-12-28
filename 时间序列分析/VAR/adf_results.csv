@@ -1,0 +1,19 @@
+Variable,Difference,Test Statistic,P-Value,Lags Used,N Observations,Significant
+date,1st,0.1025,0.9662,11,106,False
+rgnp,1st,-5.3448,0.0,1,116,True
+pgnp,1st,-1.8282,0.3666,0,117,False
+ulc,1st,-3.4658,0.0089,1,116,True
+gdfco,1st,-1.4385,0.5637,2,115,False
+gdf,1st,-1.1289,0.7034,2,115,False
+gdfim,1st,-4.1256,0.0009,0,117,True
+gdfcf,1st,-2.0545,0.2632,7,110,False
+gdfce,1st,-3.1543,0.0228,7,110,True
+date,2nd,-5.5802,0.0,10,106,True
+rgnp,2nd,-9.0123,0.0,2,114,True
+pgnp,2nd,-10.9813,0.0,0,116,True
+ulc,2nd,-8.769,0.0,2,114,True
+gdfco,2nd,-7.9102,0.0,3,113,True
+gdf,2nd,-10.0351,0.0,1,115,True
+gdfim,2nd,-9.4059,0.0,1,115,True
+gdfcf,2nd,-6.922,0.0,5,111,True
+gdfce,2nd,-5.1732,0.0,8,108,True
