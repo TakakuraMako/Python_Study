@@ -1,46 +1,18 @@
 import numpy as np
+import pandas as pd
 import matplotlib.pyplot as plt
 # 使plt支持中文
 plt.rcParams['font.sans-serif'] = ['SimHei']
 plt.rcParams['axes.unicode_minus'] = False
-a = np.array([7, 180, 85, 88, 94, 80, 70, 85, 90, 85])
-plt.figure()
-#绘制箱线图 
-plt.boxplot(a,sym='o', meanline=True, showmeans=True, showcaps=True, showbox=True, showfliers=True, notch=False, patch_artist=False, vert=True, whis=1.5)
-# 获取统计数据
-q1 = np.percentile(a, 25)  # 下四分位数
-q3 = np.percentile(a, 75)  # 上四分位数
-iqr = q3 - q1              # 四分位极差
-lower_bound = q1 - 1.5 * iqr  # 下截点
-upper_bound = q3 + 1.5 * iqr  # 上截点
-#plt.ylim(lower_bound, upper_bound)
-# 标注上下截点
-plt.text(1.1, lower_bound, f'下截点: {lower_bound:.1f}', color='purple')
-plt.text(1.1, upper_bound, f'上截点: {upper_bound:.1f}', color='purple')
+data = pd.DataFrame(np.array([[184, 207, 236, 262, 284, 311, 354, 437, 485, 550, 693, 762, 803, 896, 1070, 1331, 1746, 2336, 2641, 2834, 2972, 3180],
+                     [138, 158, 178, 199, 221, 246, 283, 347, 376, 417, 508, 553, 571, 621, 718, 855, 1118, 1434, 1768, 1876, 1895, 1973],
+                     [405, 434, 496, 562, 576, 603, 662, 802, 920, 1089, 1431, 1568, 1686, 1925, 2356, 3027, 3891, 4874, 5430, 5796, 6217, 6651]]).T, index=range(1978, 2000), columns=['全国居民', '农村居民', '城镇居民'])
 
-# 标注其他统计数据
-plt.text(1.1, np.mean(a), f'均值: {np.mean(a):.1f}', color='blue')
-plt.text(1.1, np.median(a), f'中位数: {np.median(a):.1f}', color='green')
-plt.text(1.1, q1, f'Q1: {q1:.1f}', color='orange')
-plt.text(1.1, q3, f'Q3: {q3:.1f}', color='orange')
+# 每一列分为10组，分别做直方图
+fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+for i, col in enumerate(data.columns):
+    data[col].plot(kind='hist', bins=10, ax=axes[i], title=col)
+    axes[i].set_xlabel('频数')
+    axes[i].set_xlim(0, 7000)
 
-plt.title('箱线图（带上下截点标注）')
 plt.show()
-
-
-# 样本方差
-s2 = np.sum((a - np.mean(a))**2) / (len(a) - 1)
-# 样本标准差
-std = np.sqrt(s2)
-# 变异系数
-cv = std / np.mean(a) * 100
-# 极差
-r = np.max(a) - np.min(a)
-# 四分位极差
-q3, q1 = np.percentile(a, [75, 25])
-R1 = q3 - q1
-# 四分位标准差
-Q = R1/1.349
-# 分析异常值
-print(a[(a < q1 - 1.5 * R1) | (a > q3 + 1.5 * R1)])
-print(s2, std, cv, r, R1, Q)
