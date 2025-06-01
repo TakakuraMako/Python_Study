@@ -1,0 +1,37 @@
+\documentclass[UTF8,a4paper,10pt]{article}
+
+\usepackage{ctex}         % 中文支持
+\usepackage{fancyhdr}
+\usepackage{multicol}    % 正文单双栏混排
+\usepackage{lastpage}    % 用于获得最大页数，页眉显示用
+\usepackage{geometry}    % 用于设置页边距
+\usepackage[subfigure,AllowH]{graphfig}    %图片相关
+
+\geometry{left=3cm,right=3.8cm,top=2.5cm,bottom=2.5cm}
+
+%定义行间距为1.1倍行距
+\renewcommand{\baselinestretch}{1.1}
+%重新定义缩进长度  pt是字号
+\parindent=22pt
+
+\fancypagestyle{plain}{
+\fancyhf{}
+\lhead{Month, Year}
+\chead{\centering{chinese latex template}}
+\rhead{Page \thepage\ of \pageref{LastPage}}
+\lfoot{}
+\cfoot{}
+\rfoot{}}
+\pagestyle{plain}
+
+\title{\textbf{\huge{深度学习大作业}}}
+\author{作者 熊高贤\\
+（华北电力大学）}
+\date{}  % 这一行用来去掉默认的日期显示
+
+\begin{document}
+
+Hello, world!
+
+\label{LastPage}
+\end{document}
